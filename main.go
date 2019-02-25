@@ -22,6 +22,11 @@ func main() {
 		}
 	}
 
+	// TODO do the same and collect all URLs for DC, NT, OT, PGP
+
+	// TODO use GoQuery to parse for the scriptures and find the number of verses.
+	// https://github.com/PuerkitoBio/goquery
+
 	// actually print the URL first.
 	// fmt.Println(url)
 
