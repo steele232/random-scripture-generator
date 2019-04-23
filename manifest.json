@@ -1,0 +1,37 @@
+{
+    "manifest_version": 2,
+    "name": "Random Scripture Generator",
+    "description": "Gives a random scripture verse from the standard works of The Church of Jesus Christ of Latter Days Saints. (Not an Official App from the Church)",
+    "version": "0.1",
+
+    "background": {
+        "page": "background.html"
+    },
+
+    "content_scripts": [
+        {
+            "js": [
+                "jquery-3.4.0.min.js",
+                "content.js"
+            ],
+            "matches": ["http://*/*", "https://*/*"]
+        }
+    ],
+
+    "browser_action": {
+        "default_icon": "Icons/default.png",
+        "default_popup": "popup.html"
+    },
+
+    "icons": {
+        "16": "Icons/icon16.png",
+        "48": "Icons/icon48.png",
+        "128": "Icons/icon128.png"
+    },
+
+    "permissions": [
+        "tabs",
+        "storage",
+        "activeTab"
+    ]
+}
