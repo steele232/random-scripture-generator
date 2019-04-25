@@ -83,7 +83,7 @@ func main() {
 	fmt.Println("Collected all Chapter URLs :: ", len(allChapterRefs))
 
 	allVerseRefs := make([]ScriptureRef, 0)
-	for _, chapterRef := range allChapterRefs[:20] {
+	for idx, chapterRef := range allChapterRefs {
 
 		htmlBody := getHTMLfromURL(chapterRef.Url)
 		bodyReader := strings.NewReader(htmlBody)
@@ -93,7 +93,7 @@ func main() {
 		}
 
 		numVerses := len(document.Find("p .verse").Nodes)
-		fmt.Println("URL : ", chapterRef.Url, " ==> ", numVerses)
+		fmt.Println("URL : ", chapterRef.Url, " ==> ", numVerses, " :: @Chapter-IDX ", idx)
 
 		for i := 1; i <= numVerses; i++ {
 			newURL := insertVerseNumIntoURL(chapterRef.Url, i)
