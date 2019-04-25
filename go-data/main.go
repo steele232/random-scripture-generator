@@ -72,7 +72,8 @@ func main() {
 	if err != nil {
 		log.Println("Could not make a document from url: ", url, err)
 	}
-	fmt.Println("Has article:..", document.HasClass("article"))
+
+	fmt.Println("Print the cached results :) ::: ", len(document.Find("p .verse").Nodes))
 
 }
 
