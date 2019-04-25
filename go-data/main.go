@@ -1,97 +1,131 @@
 package main
 
 import (
+	"bufio"
+	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"log"
 	"net/http"
+	"os"
 	"strconv"
 	"strings"
 
 	"github.com/PuerkitoBio/goquery"
 )
 
-type Pair struct {
-	Left  string
-	Right int
+type ScriptureRef struct {
+	Name string `json:"humanName"`
+	Url  string `json:"url"`
+}
+
+type JsonOutput struct {
+	Verses []ScriptureRef `json:"verses"`
 }
 
 func main() {
 
 	printDescriptiveStatistics()
 
-	allURLs := make([]string, 0)
+	allChapterRefs := make([]ScriptureRef, 0)
 
-	// m := bookNumChaptersMap()
 	for _, bookCode := range BofMBooks {
-		var url string
 		maxChapterNum := bookNumChaptersMap()[bookCode]
 		for i := 1; i <= maxChapterNum; i++ {
-			url = buildURL(BookOfMormon, bookCode, i)
-			allURLs = append(allURLs, url)
-			// fmt.Println("Url: ", url)
+			chapterRef := ScriptureRef{
+				Name: humanizedBookAndChapterName(bookCode, i), // (e.g. D&C 10)
+				Url:  buildURL(BookOfMormon, bookCode, i),
+			}
+			allChapterRefs = append(allChapterRefs, chapterRef)
 		}
 	}
 	for _, bookCode := range DCBooks {
-		var url string
 		maxChapterNum := bookNumChaptersMap()[bookCode]
 		for i := 1; i <= maxChapterNum; i++ {
-			url = buildURL(DCTestament, bookCode, i)
-			allURLs = append(allURLs, url)
-			// fmt.Println("Url: ", url)
+			chapterRef := ScriptureRef{
+				Name: humanizedBookAndChapterName(bookCode, i), // (e.g. D&C 10)
+				Url:  buildURL(DCTestament, bookCode, i),
+			}
+			allChapterRefs = append(allChapterRefs, chapterRef)
 		}
 	}
 	for _, bookCode := range NTBooks {
-		var url string
 		maxChapterNum := bookNumChaptersMap()[bookCode]
 		for i := 1; i <= maxChapterNum; i++ {
-			url = buildURL(NewTestament, bookCode, i)
-			allURLs = append(allURLs, url)
-			// fmt.Println("Url: ", url)
+			chapterRef := ScriptureRef{
+				Name: humanizedBookAndChapterName(bookCode, i), // (e.g. D&C 10)
+				Url:  buildURL(NewTestament, bookCode, i),
+			}
+			allChapterRefs = append(allChapterRefs, chapterRef)
 		}
 	}
 	for _, bookCode := range OTBooks {
-		var url string
 		maxChapterNum := bookNumChaptersMap()[bookCode]
 		for i := 1; i <= maxChapterNum; i++ {
-			url = buildURL(OldTestament, bookCode, i)
-			allURLs = append(allURLs, url)
-			// fmt.Println("Url: ", url)
+			chapterRef := ScriptureRef{
+				Name: humanizedBookAndChapterName(bookCode, i), // (e.g. D&C 10)
+				Url:  buildURL(OldTestament, bookCode, i),
+			}
+			allChapterRefs = append(allChapterRefs, chapterRef)
 		}
 	}
 	for _, bookCode := range PGPBooks {
-		var url string
 		maxChapterNum := bookNumChaptersMap()[bookCode]
 		for i := 1; i <= maxChapterNum; i++ {
-			url = buildURL(PearlGPrice, bookCode, i)
-			allURLs = append(allURLs, url)
-			// fmt.Println("Url: ", url)
+			chapterRef := ScriptureRef{
+				Name: humanizedBookAndChapterName(bookCode, i), // (e.g. D&C 10)
+				Url:  buildURL(PearlGPrice, bookCode, i),
+			}
+			allChapterRefs = append(allChapterRefs, chapterRef)
 		}
 	}
 
-	fmt.Println("Collected all Chapter URLs :: ", len(allURLs))
+	fmt.Println("Collected all Chapter URLs :: ", len(allChapterRefs))
 
-	pairs := make([]Pair, 0)
-	for _, url := range allURLs[:20] {
+	allVerseRefs := make([]ScriptureRef, 0)
+	for _, chapterRef := range allChapterRefs[:20] {
 
-		htmlBody := getHTMLfromURL(url)
+		htmlBody := getHTMLfromURL(chapterRef.Url)
 		bodyReader := strings.NewReader(htmlBody)
 		document, err := goquery.NewDocumentFromReader(bodyReader)
 		if err != nil {
-			log.Println("Could not make a document from url: ", url, err)
+			log.Println("Could not make a document from url: ", chapterRef.Url, err)
 		}
 
 		numVerses := len(document.Find("p .verse").Nodes)
-		fmt.Println("URL : ", url, " ==> ", numVerses)
+		fmt.Println("URL : ", chapterRef.Url, " ==> ", numVerses)
 
 		for i := 1; i <= numVerses; i++ {
-			newURL := insertVerseNumIntoURL(url, i)
-			pairs = append(pairs, Pair{Left: newURL, Right: i})
+			newURL := insertVerseNumIntoURL(chapterRef.Url, i)
+			newName := chapterRef.Name + ":" + strconv.Itoa(i)
+			newRef := ScriptureRef{
+				Name: newName,
+				Url:  newURL,
+			}
+			allVerseRefs = append(allVerseRefs, newRef)
 		}
 
 	}
-	fmt.Println("**NumPairs: ", len(pairs))
-	fmt.Println("SAMPLE PAIRS:: ", pairs[:30])
+	fmt.Println("Number of Verses: ", len(allVerseRefs))
+	fmt.Println("SAMPLE VERSES:: ", allVerseRefs[:30])
+
+	/* Write to a file */
+
+	// open the file
+	f, err := os.Create("verses.json")
+	if err != nil {
+		log.Println("Could not write to file verses.json: ", err)
+	}
+	defer f.Close()
+
+	// make a writer from the file
+	w := bufio.NewWriter(f)
+
+	// write it to a file.
+	enc := json.NewEncoder(w)
+	enc.Encode(allVerseRefs)
+
+	w.Flush()
 
 }
 

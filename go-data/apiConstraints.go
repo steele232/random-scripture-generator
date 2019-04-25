@@ -1,5 +1,9 @@
 package main
 
+import (
+	"strconv"
+)
+
 const ScripturesPrefix = "scriptures"
 
 const langParam = "lang=eng"
@@ -9,6 +13,118 @@ const DCTestament = "dc-testament"
 const PearlGPrice = "pgp"
 const NewTestament = "nt"
 const OldTestament = "ot"
+
+func humanizedBookNameMap() map[string]string {
+	bookNameMap := make(map[string]string)
+
+	// Old Testament ("ot")
+	bookNameMap["gen"] = "Genesis"
+	bookNameMap["ex"] = "Exodus"
+	bookNameMap["lev"] = "Leviticus"
+	bookNameMap["num"] = "Numbers"
+	bookNameMap["deut"] = "Deuteronomy"
+	bookNameMap["josh"] = "Joshua"
+	bookNameMap["judg"] = "Judges"
+	bookNameMap["ruth"] = "Ruth"
+	bookNameMap["1-sam"] = "1 Samuel"
+	bookNameMap["2-sam"] = "2 Samuel"
+	bookNameMap["1-kgs"] = "1 Kings"
+	bookNameMap["2-kgs"] = "2 Kings"
+	bookNameMap["1-chr"] = "1 Chronicles"
+	bookNameMap["2-chr"] = "2 Chronicles"
+	bookNameMap["ezra"] = "Ezra"
+	bookNameMap["neh"] = "Nehemiah"
+	bookNameMap["esth"] = "Esther"
+	bookNameMap["job"] = "Job"
+	bookNameMap["ps"] = "Psalms"
+	bookNameMap["prov"] = "Proverbs"
+	bookNameMap["eccl"] = "Ecclesiastes"
+	bookNameMap["song"] = "Song of Solomon"
+	bookNameMap["isa"] = "Isaiah"
+	bookNameMap["jer"] = "Jeremiah"
+	bookNameMap["lam"] = "Lamentations"
+	bookNameMap["ezek"] = "Ezekiel"
+	bookNameMap["dan"] = "Daniel"
+	bookNameMap["hosea"] = "Hosea"
+	bookNameMap["joel"] = "Joel"
+	bookNameMap["amos"] = "Amos"
+	bookNameMap["obad"] = "Obadiah"
+	bookNameMap["jonah"] = "Jonah"
+	bookNameMap["micah"] = "Micah"
+	bookNameMap["nahum"] = "Nahum"
+	bookNameMap["hab"] = "Habakkuk"
+	bookNameMap["zeph"] = "Zephaniah"
+	bookNameMap["hag"] = "Haggai"
+	bookNameMap["zech"] = "Zechariah"
+	bookNameMap["mal"] = "Malachi"
+
+	// New Testament ("nt")
+	bookNameMap["matt"] = "Matthew"
+	bookNameMap["mark"] = "Mark"
+	bookNameMap["luke"] = "Luke"
+	bookNameMap["john"] = "John"
+	bookNameMap["acts"] = "Acts"
+	bookNameMap["romans"] = "Romans"
+	bookNameMap["1-cor"] = "1 Corinthians"
+	bookNameMap["2-cor"] = "2 Corinthians"
+	bookNameMap["gal"] = "Galatians"
+	bookNameMap["eph"] = "Ephesians"
+	bookNameMap["philip"] = "Philippians"
+	bookNameMap["col"] = "Collosians"
+	bookNameMap["1-thes"] = "1 Thessalonians"
+	bookNameMap["2-thes"] = "2 Thessalonians"
+	bookNameMap["1-tim"] = "1 Timothy"
+	bookNameMap["2-tim"] = "2 Timothy"
+	bookNameMap["titus"] = "Titus"
+	bookNameMap["philem"] = "Philemon"
+	bookNameMap["heb"] = "Hebrews"
+	bookNameMap["james"] = "James"
+	bookNameMap["1-pet"] = "1 Peter"
+	bookNameMap["2-pet"] = "2 Peter"
+	bookNameMap["1-jn"] = "1 John"
+	bookNameMap["2-jn"] = "2 John"
+	bookNameMap["3-jn"] = "3 John"
+	bookNameMap["jude"] = "Jude"
+	bookNameMap["rev"] = "Revelation"
+
+	// Book of Mormon ("bofm")
+	// ?? skipped the introduction?
+	bookNameMap["1-ne"] = "1 Nephi"
+	bookNameMap["2-ne"] = "2 Nephi"
+	bookNameMap["jacob"] = "Jacob"
+	bookNameMap["enos"] = "Enos"
+	bookNameMap["jarom"] = "Jarom"
+	bookNameMap["omni"] = "Omni"
+	bookNameMap["w-of-m"] = "Words of Mormon"
+	bookNameMap["mosiah"] = "Mosiah"
+	bookNameMap["alma"] = "Alma"
+	bookNameMap["hel"] = "Helaman"
+	bookNameMap["3-ne"] = "3 Nephi"
+	bookNameMap["4-ne"] = "4 Nephi"
+	bookNameMap["morm"] = "Mormon"
+	bookNameMap["ether"] = "Ether"
+	bookNameMap["moro"] = "Moroni"
+
+	// Doctrine and Covenants ("dc-testament")
+	// ?? skipped the introduction?
+	bookNameMap["dc"] = "D&C"
+	bookNameMap["od"] = "Official Declaration"
+
+	// Pearl of Great Price ("pgp")
+	// ?? skipped the introduction?
+	bookNameMap["moses"] = "Moses"
+	bookNameMap["abr"] = "Abraham"      // ignoring fac-1, fac-2, fac-3
+	bookNameMap["js-m"] = "JST-Matthew" // ?? this could be tricky with verses
+	bookNameMap["js-h"] = "Joseph Smith History"
+	bookNameMap["a-of-f"] = "Articles of Faith"
+
+	return bookNameMap
+}
+
+func humanizedBookAndChapterName(bookCode string, chapterNum int) string {
+	bookMap := humanizedBookNameMap()
+	return bookMap[bookCode] + " " + strconv.Itoa(chapterNum)
+}
 
 func bookNumChaptersMap() map[string]int {
 
