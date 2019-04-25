@@ -149,7 +149,7 @@ func bookNumChaptersMap() map[string]int {
 	numChaptersMap["neh"] = 13
 	numChaptersMap["esth"] = 10
 	numChaptersMap["job"] = 42
-	numChaptersMap["ps"] = 4
+	numChaptersMap["ps"] = 150
 	numChaptersMap["prov"] = 31
 	numChaptersMap["eccl"] = 12
 	numChaptersMap["song"] = 8
