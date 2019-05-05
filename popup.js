@@ -17,42 +17,63 @@ document.getElementById("appendTest").addEventListener("click", appendTest);
 /*================================*/
 // Load in the Scripture References
 /*================================*/
-var __ScriptureRefs__
+var __ScriptureRefs__ = JSON.parse(__verses__);
 
-function loadJSON(callback) {
+// function loadJSON(callback) {
 
-    var xobj = new XMLHttpRequest();
-    xobj.overrideMimeType("application/json");
-    xobj.open('GET', 'verses.json', true); // DONE // Replace 'my_data' with the path to your file
-    xobj.onreadystatechange = function () {
-          if (xobj.readyState == 4 && xobj.status == "200") {
-            // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
-            callback(xobj.responseText);
-          }
-    };
-    xobj.send(null);  
+//     var xobj = new XMLHttpRequest();
+//     xobj.overrideMimeType("application/json");
+//     xobj.open('GET', 'verses.json', true); // DONE // Replace 'my_data' with the path to your file
+//     xobj.onreadystatechange = function () {
+//           if (xobj.readyState == 4 && xobj.status == "200") {
+//             // Required use of an anonymous callback as .open will NOT return a value but simply returns undefined in asynchronous mode
+//             callback(xobj.responseText);
+//           }
+//     };
+//     xobj.send(null);  
+// }
+
+// function assignToScriptureRefs(str) {
+//     // Parse JSON string into object
+//     var __ScriptureRefs__ = JSON.parse(str);
+// }
+
+// function loadScriptureRefs() {
+//     loadJSON(
+//         assignToScriptureRefs
+//     )
+// }
+// document.addEventListener("load", loadScriptureRefs)
+
+/*================================*/
+// Get a Random Number!
+/*================================*/
+function getRandomInt(max) {
+    return Math.floor(Math.random() * Math.floor(max));
 }
-
-function assignToScriptureRefs(str) {
-    // Parse JSON string into object
-    var __ScriptureRefs__ = JSON.parse(str);
-}
-
-function loadScriptureRefs() {
-    loadJSON(
-        assignToScriptureRefs
-    )
-}
-document.addEventListener("load", loadScriptureRefs)
+  
+// console.log(getRandomInt(3));
+// // expected output: 0, 1 or 2
 
 function logBool(b) {
     var bkg = chrome.extension.getBackgroundPage();
     bkg.console.log(b)
 }
 function generateNewScripture() {
-    loadScriptureRefs()
+    // loadScriptureRefs()
     var bkg = chrome.extension.getBackgroundPage();
-    bkg.console.log(__ScriptureRefs__)
+    let numVerses = __ScriptureRefs__.data.length
+    bkg.console.log("Number of Verses :: " + numVerses)
+    var randVerseIdx = getRandomInt(numVerses)
+    bkg.console.log("Show the random verse IDX!! :: " + randVerseIdx)
+    let verseRefObj = __ScriptureRefs__.data[randVerseIdx]
+    bkg.console.log(verseRefObj)
+
+    bkg.console.log("name: " + verseRefObj.humanName)
+    linkElm = document.getElementById("verse-name")
+    linkElm.innerText = verseRefObj.humanName
+    
+    
     bkg.console.log( chrome.extension.isAllowedFileSchemeAccess(logBool) )
 }
 document.getElementById("newScripture").addEventListener("click",generateNewScripture);
