@@ -67,14 +67,9 @@ function generateNewScripture() {
     var randVerseIdx = getRandomInt(numVerses)
     bkg.console.log("Show the random verse IDX!! :: " + randVerseIdx)
     let verseRefObj = __ScriptureRefs__.data[randVerseIdx]
-    bkg.console.log(verseRefObj)
-
-    bkg.console.log("name: " + verseRefObj.humanName)
     linkElm = document.getElementById("verse-name")
     linkElm.innerText = verseRefObj.humanName
-    
-    
-    bkg.console.log( chrome.extension.isAllowedFileSchemeAccess(logBool) )
+    linkElm.href = verseRefObj.url
 }
 document.getElementById("newScripture").addEventListener("click",generateNewScripture);
 
