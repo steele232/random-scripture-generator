@@ -70,6 +70,10 @@ function generateNewScripture() {
     linkElm = document.getElementById("verse-name")
     linkElm.innerText = verseRefObj.humanName
     linkElm.href = verseRefObj.url
+
+    // let's try opening it in a new tab...
+    chrome.tabs.create({url:verseRefObj.url+"#p8"})
+
 }
 document.getElementById("newScripture").addEventListener("click",generateNewScripture);
 
