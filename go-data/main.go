@@ -17,6 +17,7 @@ import (
 type ScriptureRef struct {
 	Name string `json:"humanName"`
 	Url  string `json:"url"`
+	Content string `json:"content"`
 }
 
 type JsonOutput struct {
@@ -26,6 +27,58 @@ type JsonOutput struct {
 func main() {
 
 	printDescriptiveStatistics()
+
+	allChapterRefs := collectAllChapterURLs()
+	fmt.Println("Collected all Chapter URLs :: ", len(allChapterRefs))
+
+	allVerseRefs := make([]ScriptureRef, 0)
+	for idx, chapterRef := range allChapterRefs {
+
+		htmlBody := getHTMLfromURL(chapterRef.Url)
+		bodyReader := strings.NewReader(htmlBody)
+		document, err := goquery.NewDocumentFromReader(bodyReader)
+		if err != nil {
+			log.Println("Could not make a document from url: ", chapterRef.Url, err)
+		}
+
+		numVerses := len(document.Find("p .verse").Nodes)
+		fmt.Println("URL : ", chapterRef.Url, " ==> ", numVerses, " :: @Chapter-IDX ", idx)
+
+		for i := 1; i <= numVerses; i++ {
+			newURL := insertVerseNumIntoURL(chapterRef.Url, i)
+			newName := chapterRef.Name + ":" + strconv.Itoa(i)
+			newRef := ScriptureRef{
+				Name: newName,
+				Url:  newURL,
+			}
+			allVerseRefs = append(allVerseRefs, newRef)
+		}
+
+	}
+	fmt.Println("Number of Verses: ", len(allVerseRefs))
+	fmt.Println("SAMPLE VERSES:: ", allVerseRefs[:30])
+
+	/* Write to a file */
+
+	// open the file
+	f, err := os.Create("verses.json")
+	if err != nil {
+		log.Println("Could not write to file verses.json: ", err)
+	}
+	defer f.Close()
+
+	// make a writer from the file
+	w := bufio.NewWriter(f)
+
+	// write it to a file.
+	enc := json.NewEncoder(w)
+	enc.Encode(allVerseRefs)
+
+	w.Flush()
+
+}
+
+func collectAllChapterURLs() []ScriptureRef {
 
 	allChapterRefs := make([]ScriptureRef, 0)
 
@@ -80,53 +133,7 @@ func main() {
 		}
 	}
 
-	fmt.Println("Collected all Chapter URLs :: ", len(allChapterRefs))
-
-	allVerseRefs := make([]ScriptureRef, 0)
-	for idx, chapterRef := range allChapterRefs {
-
-		htmlBody := getHTMLfromURL(chapterRef.Url)
-		bodyReader := strings.NewReader(htmlBody)
-		document, err := goquery.NewDocumentFromReader(bodyReader)
-		if err != nil {
-			log.Println("Could not make a document from url: ", chapterRef.Url, err)
-		}
-
-		numVerses := len(document.Find("p .verse").Nodes)
-		fmt.Println("URL : ", chapterRef.Url, " ==> ", numVerses, " :: @Chapter-IDX ", idx)
-
-		for i := 1; i <= numVerses; i++ {
-			newURL := insertVerseNumIntoURL(chapterRef.Url, i)
-			newName := chapterRef.Name + ":" + strconv.Itoa(i)
-			newRef := ScriptureRef{
-				Name: newName,
-				Url:  newURL,
-			}
-			allVerseRefs = append(allVerseRefs, newRef)
-		}
-
-	}
-	fmt.Println("Number of Verses: ", len(allVerseRefs))
-	fmt.Println("SAMPLE VERSES:: ", allVerseRefs[:30])
-
-	/* Write to a file */
-
-	// open the file
-	f, err := os.Create("verses.json")
-	if err != nil {
-		log.Println("Could not write to file verses.json: ", err)
-	}
-	defer f.Close()
-
-	// make a writer from the file
-	w := bufio.NewWriter(f)
-
-	// write it to a file.
-	enc := json.NewEncoder(w)
-	enc.Encode(allVerseRefs)
-
-	w.Flush()
-
+	return allChapterRefs
 }
 
 func insertVerseNumIntoURL(url string, verseNum int) string {
