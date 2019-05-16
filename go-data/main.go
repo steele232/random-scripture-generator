@@ -34,6 +34,10 @@ func main() {
 	allVerseRefs := make([]ScriptureRef, 0)
 	for idx, chapterRef := range allChapterRefs {
 
+		if idx > 10 {
+			break
+		}
+
 		htmlBody := getHTMLfromURL(chapterRef.Url)
 		bodyReader := strings.NewReader(htmlBody)
 		document, err := goquery.NewDocumentFromReader(bodyReader)
