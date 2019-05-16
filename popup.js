@@ -19,8 +19,9 @@ function logBool(b) {
     bkg.console.log(b)
 }
 function generateNewScripture() {
-    // loadScriptureRefs()
+    
     var bkg = chrome.extension.getBackgroundPage();
+
     let numVerses = __ScriptureRefs__.data.length
     bkg.console.log("Number of Verses :: " + numVerses)
     var randVerseIdx = getRandomInt(numVerses)
@@ -30,29 +31,18 @@ function generateNewScripture() {
     linkElm.innerText = verseRefObj.humanName
     linkElm.href = verseRefObj.url
 
-    // let's try opening it in a new tab...
-    // chrome.tabs.create({url:verseRefObj.url+"#p8"})
+    // SAVE the newly generated scripture as the lastScripture
+    chrome.storage.local.set({"lastScripture": randVerseIdx}, (items) => {
+
+        var bkg = chrome.extension.getBackgroundPage();
+        bkg.console.log("Saved as LASTSCRIPTURE:: " + randVerseIdx)
+
+    });
 
 }
 document.getElementById("newScripture").addEventListener("click",generateNewScripture);
 
-
-// Local storage
-var LASTSCRIPTURE = 0;
-window.onload = () => {
-    chrome.storage.local.get(["last-scripture"], (items) => {
-        // Create a variable if one does not exist
-        if (!items["last-scripture"]) {
-            LASTSCRIPTURE = 0;
-        }
-
-        // Reassign or manipulate data
-        else {
-            LASTSCRIPTURE = items["last-scripture"]
-        }
-    });
-};
-
+/* Load Scriptures */ 
 function loadInScripture(scriptureIdx) {
     
     let verseRefObj = __ScriptureRefs__.data[scriptureIdx]
@@ -62,8 +52,23 @@ function loadInScripture(scriptureIdx) {
 
 }
 
-// LOAD IT IN THE HISTORY [ONLOAD]
-function start() {
-    loadInScripture(0)
-}
-start()
+// Local storage && Load in scripture on Startup
+var LASTSCRIPTURE = 0;
+window.onload = () => {
+    chrome.storage.local.get(["lastScripture"], (items) => {
+        // Create a variable if one does not exist
+        if (!items["lastScripture"]) {
+            LASTSCRIPTURE = 0;
+        }
+
+        // Reassign or manipulate data
+        else {
+            LASTSCRIPTURE = items.lastScripture
+        }
+        loadInScripture(LASTSCRIPTURE)
+
+        var bkg = chrome.extension.getBackgroundPage();
+        bkg.console.log("Loaded in LASTSCRIPTURE:: " + LASTSCRIPTURE)
+
+    });
+};
