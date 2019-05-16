@@ -36,3 +36,34 @@ function generateNewScripture() {
 }
 document.getElementById("newScripture").addEventListener("click",generateNewScripture);
 
+
+// Local storage
+var LASTSCRIPTURE = 0;
+window.onload = () => {
+    chrome.storage.local.get(["last-scripture"], (items) => {
+        // Create a variable if one does not exist
+        if (!items["last-scripture"]) {
+            LASTSCRIPTURE = 0;
+        }
+
+        // Reassign or manipulate data
+        else {
+            LASTSCRIPTURE = items["last-scripture"]
+        }
+    });
+};
+
+function loadInScripture(scriptureIdx) {
+    
+    let verseRefObj = __ScriptureRefs__.data[scriptureIdx]
+    linkElm = document.getElementById("verse-name")
+    linkElm.innerText = verseRefObj.humanName
+    linkElm.href = verseRefObj.url
+
+}
+
+// LOAD IT IN THE HISTORY [ONLOAD]
+function start() {
+    loadInScripture(0)
+}
+start()
