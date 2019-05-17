@@ -34,10 +34,6 @@ func main() {
 	allVerseRefs := make([]ScriptureRef, 0)
 	for idx, chapterRef := range allChapterRefs {
 
-		if idx > 10 {
-			break
-		}
-
 		htmlBody := getHTMLfromURL(chapterRef.Url)
 		bodyReader := strings.NewReader(htmlBody)
 		document, err := goquery.NewDocumentFromReader(bodyReader)
@@ -147,7 +143,7 @@ func collectAllChapterURLs() []ScriptureRef {
 func insertVerseNumIntoURL(url string, verseNum int) string {
 
 	sArr := strings.Split(url, "?")
-	return sArr[0] + "." + strconv.Itoa(verseNum) + "?" + sArr[1]
+	return sArr[0] + "." + strconv.Itoa(verseNum) + "?" + sArr[1] + "#p" + strconv.Itoa(verseNum)
 }
 
 // buildURL uses package-global variables from apiConstraints.go

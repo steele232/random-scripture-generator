@@ -30,6 +30,8 @@ function generateNewScripture() {
     linkElm = document.getElementById("verse-name")
     linkElm.innerText = verseRefObj.humanName
     linkElm.href = verseRefObj.url
+    contentElm = document.getElementById("verse-content")
+    contentElm.innerText = verseRefObj.content
 
     // SAVE the newly generated scripture as the lastScripture
     chrome.storage.local.set({"lastScripture": randVerseIdx}, (items) => {
@@ -49,6 +51,8 @@ function loadInScripture(scriptureIdx) {
     linkElm = document.getElementById("verse-name")
     linkElm.innerText = verseRefObj.humanName
     linkElm.href = verseRefObj.url
+    contentElm = document.getElementById("verse-content")
+    contentElm.innerText = verseRefObj.content
 
 }
 
