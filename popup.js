@@ -2,7 +2,7 @@
 /*================================*/
 // Load in the Scripture References
 /*================================*/
-var __ScriptureRefs__ = JSON.parse(__verses__);
+var __ScriptureRefs__ = __verses__
 
 /*================================*/
 // Get a Random Number!
@@ -31,7 +31,7 @@ function generateNewScripture() {
     linkElm.innerText = verseRefObj.humanName
     linkElm.href = verseRefObj.url
     contentElm = document.getElementById("verse-content")
-    contentElm.innerText = verseRefObj.content
+    contentElm.innerHTML = verseRefObj.content
 
     // SAVE the newly generated scripture as the lastScripture
     chrome.storage.local.set({"lastScripture": randVerseIdx}, (items) => {
@@ -52,7 +52,7 @@ function loadInScripture(scriptureIdx) {
     linkElm.innerText = verseRefObj.humanName
     linkElm.href = verseRefObj.url
     contentElm = document.getElementById("verse-content")
-    contentElm.innerText = verseRefObj.content
+    contentElm.innerHTML = verseRefObj.content
 
 }
 

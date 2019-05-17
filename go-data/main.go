@@ -34,6 +34,10 @@ func main() {
 	allVerseRefs := make([]ScriptureRef, 0)
 	for idx, chapterRef := range allChapterRefs {
 
+		// if idx > 10 {
+		// 	break
+		// }
+
 		htmlBody := getHTMLfromURL(chapterRef.Url)
 		bodyReader := strings.NewReader(htmlBody)
 		document, err := goquery.NewDocumentFromReader(bodyReader)
@@ -48,7 +52,10 @@ func main() {
 			newURL := insertVerseNumIntoURL(chapterRef.Url, i)
 			verseNum := i
 			verseSelector := "#p" + strconv.Itoa(verseNum)
-			verseContent := document.Find(verseSelector).Text()
+			verseContent, err := document.Find(verseSelector).Html()
+			if err != nil {
+				log.Println("Could not make a verseContent HTML string from url: ", newURL, err)
+			}
 			newName := chapterRef.Name + ":" + strconv.Itoa(verseNum)
 			newRef := ScriptureRef {
 				Name: newName,
