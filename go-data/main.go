@@ -50,10 +50,14 @@ func main() {
 
 		for i := 1; i <= numVerses; i++ {
 			newURL := insertVerseNumIntoURL(chapterRef.Url, i)
-			newName := chapterRef.Name + ":" + strconv.Itoa(i)
-			newRef := ScriptureRef{
+			verseNum := i
+			verseSelector := "#p" + strconv.Itoa(verseNum)
+			verseContent := document.Find(verseSelector).Text()
+			newName := chapterRef.Name + ":" + strconv.Itoa(verseNum)
+			newRef := ScriptureRef {
 				Name: newName,
 				Url:  newURL,
+				Content: verseContent,
 			}
 			allVerseRefs = append(allVerseRefs, newRef)
 		}
