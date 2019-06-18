@@ -1,0 +1,3415 @@
+:root {
+
+	/* ---- color ------*/
+	--color-pinterest: rgba(203,32,39,1);
+	--color-google: rgba(205,32,31,1);
+	--color-twitter: rgba(85,172,238,1);
+	--color-facebook: rgba(59,89,152,1);
+	--color-instagram: rgba(60,90,150,1);
+
+	/* ---- breakpoint ------*/
+	--breakpoint-100: 0em;
+	--breakpoint-200: 30em;
+	--breakpoint-300: 37.5em;
+	--breakpoint-400: 52.5em;
+	--breakpoint-500: 60em;
+	--breakpoint-600: 80em;
+	--breakpoint-700: 90em;
+	--breakpoint-800: 100em;
+	--breakpoint-900: 120em;
+
+	/* ---- media-query ------
+	@custom-media --mq-100 (min-width: 0em); 
+	@custom-media --mq-100-max (max-width: 37.499em)); 
+	@custom-media --mq-100-only (min-width: 0em) and (max-width: 37.499em);
+	@custom-media --mq-200 (min-width: 37.5em); 
+	@custom-media --mq-200-max (max-width: 59.999em)); 
+	@custom-media --mq-200-only (min-width: 37.5em) and (max-width: 59.999em);
+	@custom-media --mq-300 (min-width: 60em); 
+	@custom-media --mq-300-max (max-width: 79.999em)); 
+	@custom-media --mq-300-only (min-width: 60em) and (max-width: 79.999em);
+	@custom-media --mq-400 (min-width: 80em); 
+	@custom-media --mq-400-max (max-width: 119.999em)); 
+	@custom-media --mq-400-only (min-width: 80em) and (max-width: 119.999em); */
+
+	/* ---- column-number ------*/
+	--column-number-400: 4;
+	--column-number-500: 8;
+	--column-number-600: 12;
+
+	/* ---- gutter ------*/
+	--gutter-500: 1em;
+	--gutter-600: 1.5em;
+
+	/* ---- z ------*/
+	--z-0: 0;
+	--z-100: 100;
+	--z-200: 200;
+	--z-300: 300;
+	--z-400: 400;
+	--z-500: 500;
+}
+:root {
+
+	/* ---- white ------*/
+	--white: rgba(255,255,255,1);
+	--white-500: rgba(255,255,255,1);
+	--white-500-t: rgba(255,255,255,0.5);
+
+	/* ---- black ------*/
+	--black-200: rgba(241,241,243,1);
+	--black-300: rgba(230,230,232,1);
+	--black-300-t: rgba(0,0,0,0.3);
+	--black-400: rgba(208,211,212,1);
+	--black-500: rgba(162,170,173,1);
+	--black-600: rgba(151,153,155,1);
+	--black-700: rgba(83,86,90,1);
+	--black-700-t: rgba(0,0,0,0.7);
+	--black: rgba(51,51,51,1);
+	--black-800: rgba(51,51,51,1);
+	--black-800-t: rgba(38,38,38,0.95);
+
+	/* ---- blue ------*/
+	--blue-300: rgba(100,205,234,1);
+	--blue-400: rgba(0,169,218,1);
+	--blue: rgba(0,127,164,1);
+	--blue-500: rgba(0,127,164,1);
+	--blue-600: rgba(3,98,125,1);
+
+	/* ---- green ------*/
+	--green-300: rgba(111,197,178,1);
+	--green-400: rgba(25,176,139,1);
+	--green: rgba(0,132,104,1);
+	--green-500: rgba(0,132,104,1);
+	--green-600: rgba(15,100,79,1);
+	--green-utility: rgba(12,134,103,1);
+
+	/* ---- orange ------*/
+	--orange-300: rgba(251,185,136,1);
+	--orange-400: rgba(251,142,60,1);
+	--orange: rgba(232,133,66,1);
+	--orange-500: rgba(232,133,66,1);
+	--orange-600: rgba(181,112,63,1);
+
+	/* ---- red ------*/
+	--red-300: rgba(229,132,129,1);
+	--red-400: rgba(211,56,55,1);
+	--red: rgba(190,44,51,1);
+	--red-500: rgba(190,44,51,1);
+	--red-600: rgba(175,42,49,1);
+	--red-utility: rgba(188,36,45,1);
+
+	/* ---- sans ------*/
+	--sans: 'Open Sans', Zoram, NotoSansMyanmar, 'noto sans', Helvetica, Arial, sans-serif;
+
+	/* ---- serif ------*/
+	--serif: 'Palatino Linotype', Palatino, Pahoran, NotoSansMyanmar, Georgia, serif;
+
+	/* ---- mono ------*/
+	--mono: 'Courier New', Courier, monospace, NotoSansMyanmar;
+
+	/* ---- sans-font ------*/
+	--sans-font-GWeb-Light-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-Light-Normal.woff;
+	--sans-font-GWeb-Light-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-Light-Normal.woff2;
+	--sans-font-GWeb-Light-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-Light-Italic.woff;
+	--sans-font-GWeb-Light-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-Light-Italic.woff2;
+	--sans-font-GWeb-Regular-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-Regular-Normal.woff;
+	--sans-font-GWeb-Regular-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-Regular-Normal.woff2;
+	--sans-font-GWeb-Regular-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-Regular-Italic.woff;
+	--sans-font-GWeb-Regular-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-Regular-Italic.woff2;
+	--sans-font-GWeb-SemiBold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-SemiBold-Normal.woff;
+	--sans-font-GWeb-SemiBold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-SemiBold-Normal.woff2;
+	--sans-font-GWeb-SemiBold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-SemiBold-Italic.woff;
+	--sans-font-GWeb-SemiBold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-SemiBold-Italic.woff2;
+	--sans-font-GWeb-Bold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-Bold-Normal.woff;
+	--sans-font-GWeb-Bold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-Bold-Normal.woff2;
+	--sans-font-GWeb-Bold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-Bold-Italic.woff;
+	--sans-font-GWeb-Bold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-Bold-Italic.woff2;
+	--sans-font-GWebExt-Light-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-Light-Normal.woff;
+	--sans-font-GWebExt-Light-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-Light-Normal.woff2;
+	--sans-font-GWebExt-Light-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-Light-Italic.woff;
+	--sans-font-GWebExt-Light-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-Light-Italic.woff2;
+	--sans-font-GWebExt-Regular-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-Regular-Normal.woff;
+	--sans-font-GWebExt-Regular-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-Regular-Normal.woff2;
+	--sans-font-GWebExt-Regular-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-Regular-Italic.woff;
+	--sans-font-GWebExt-Regular-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-Regular-Italic.woff2;
+	--sans-font-GWebExt-SemiBold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-SemiBold-Normal.woff;
+	--sans-font-GWebExt-SemiBold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-SemiBold-Normal.woff2;
+	--sans-font-GWebExt-SemiBold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-SemiBold-Italic.woff;
+	--sans-font-GWebExt-SemiBold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-SemiBold-Italic.woff2;
+	--sans-font-GWebExt-Bold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-Bold-Normal.woff;
+	--sans-font-GWebExt-Bold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-Bold-Normal.woff2;
+	--sans-font-GWebExt-Bold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-Bold-Italic.woff;
+	--sans-font-GWebExt-Bold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-Bold-Italic.woff2;
+	--sans-font-GWebViet-Light-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-Light-Normal.woff;
+	--sans-font-GWebViet-Light-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-Light-Normal.woff2;
+	--sans-font-GWebViet-Light-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-Light-Italic.woff;
+	--sans-font-GWebViet-Light-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-Light-Italic.woff2;
+	--sans-font-GWebViet-Regular-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-Regular-Normal.woff;
+	--sans-font-GWebViet-Regular-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-Regular-Normal.woff2;
+	--sans-font-GWebViet-Regular-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-Regular-Italic.woff;
+	--sans-font-GWebViet-Regular-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-Regular-Italic.woff2;
+	--sans-font-GWebViet-SemiBold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-SemiBold-Normal.woff;
+	--sans-font-GWebViet-SemiBold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-SemiBold-Normal.woff2;
+	--sans-font-GWebViet-SemiBold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-SemiBold-Italic.woff;
+	--sans-font-GWebViet-SemiBold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-SemiBold-Italic.woff2;
+	--sans-font-GWebViet-Bold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-Bold-Normal.woff;
+	--sans-font-GWebViet-Bold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-Bold-Normal.woff2;
+	--sans-font-GWebViet-Bold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-Bold-Italic.woff;
+	--sans-font-GWebViet-Bold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-Bold-Italic.woff2;
+	--sans-font-GWebCyr-Light-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-Light-Normal.woff;
+	--sans-font-GWebCyr-Light-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-Light-Normal.woff2;
+	--sans-font-GWebCyr-Light-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-Light-Italic.woff;
+	--sans-font-GWebCyr-Light-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-Light-Italic.woff2;
+	--sans-font-GWebCyr-Regular-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-Regular-Normal.woff;
+	--sans-font-GWebCyr-Regular-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-Regular-Normal.woff2;
+	--sans-font-GWebCyr-Regular-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-Regular-Italic.woff;
+	--sans-font-GWebCyr-Regular-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-Regular-Italic.woff2;
+	--sans-font-GWebCyr-SemiBold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-SemiBold-Normal.woff;
+	--sans-font-GWebCyr-SemiBold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-SemiBold-Normal.woff2;
+	--sans-font-GWebCyr-SemiBold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-SemiBold-Italic.woff;
+	--sans-font-GWebCyr-SemiBold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-SemiBold-Italic.woff2;
+	--sans-font-GWebCyr-Bold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-Bold-Normal.woff;
+	--sans-font-GWebCyr-Bold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-Bold-Normal.woff2;
+	--sans-font-GWebCyr-Bold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-Bold-Italic.woff;
+	--sans-font-GWebCyr-Bold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-Bold-Italic.woff2;
+	--sans-font-GWebCyrExt-Light-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-Light-Normal.woff;
+	--sans-font-GWebCyrExt-Light-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-Light-Normal.woff2;
+	--sans-font-GWebCyrExt-Light-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-Light-Italic.woff;
+	--sans-font-GWebCyrExt-Light-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-Light-Italic.woff2;
+	--sans-font-GWebCyrExt-Regular-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-Regular-Normal.woff;
+	--sans-font-GWebCyrExt-Regular-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-Regular-Normal.woff2;
+	--sans-font-GWebCyrExt-Regular-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-Regular-Italic.woff;
+	--sans-font-GWebCyrExt-Regular-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-Regular-Italic.woff2;
+	--sans-font-GWebCyrExt-SemiBold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-SemiBold-Normal.woff;
+	--sans-font-GWebCyrExt-SemiBold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-SemiBold-Normal.woff2;
+	--sans-font-GWebCyrExt-SemiBold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-SemiBold-Italic.woff;
+	--sans-font-GWebCyrExt-SemiBold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-SemiBold-Italic.woff2;
+	--sans-font-GWebCyrExt-Bold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-Bold-Normal.woff;
+	--sans-font-GWebCyrExt-Bold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-Bold-Normal.woff2;
+	--sans-font-GWebCyrExt-Bold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-Bold-Italic.woff;
+	--sans-font-GWebCyrExt-Bold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-Bold-Italic.woff2;
+	--sans-font-GWebGr-Light-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-Light-Normal.woff;
+	--sans-font-GWebGr-Light-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-Light-Normal.woff2;
+	--sans-font-GWebGr-Light-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-Light-Italic.woff;
+	--sans-font-GWebGr-Light-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-Light-Italic.woff2;
+	--sans-font-GWebGr-Regular-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-Regular-Normal.woff;
+	--sans-font-GWebGr-Regular-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-Regular-Normal.woff2;
+	--sans-font-GWebGr-Regular-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-Regular-Italic.woff;
+	--sans-font-GWebGr-Regular-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-Regular-Italic.woff2;
+	--sans-font-GWebGr-SemiBold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-SemiBold-Normal.woff;
+	--sans-font-GWebGr-SemiBold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-SemiBold-Normal.woff2;
+	--sans-font-GWebGr-SemiBold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-SemiBold-Italic.woff;
+	--sans-font-GWebGr-SemiBold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-SemiBold-Italic.woff2;
+	--sans-font-GWebGr-Bold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-Bold-Normal.woff;
+	--sans-font-GWebGr-Bold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-Bold-Normal.woff2;
+	--sans-font-GWebGr-Bold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-Bold-Italic.woff;
+	--sans-font-GWebGr-Bold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-Bold-Italic.woff2;
+	--sans-font-GWebM-Light-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-Light-Normal.woff;
+	--sans-font-GWebM-Light-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-Light-Normal.woff2;
+	--sans-font-GWebM-Light-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-Light-Italic.woff;
+	--sans-font-GWebM-Light-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-Light-Italic.woff2;
+	--sans-font-GWebM-Regular-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-Regular-Normal.woff;
+	--sans-font-GWebM-Regular-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-Regular-Normal.woff2;
+	--sans-font-GWebM-Regular-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-Regular-Italic.woff;
+	--sans-font-GWebM-Regular-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-Regular-Italic.woff2;
+	--sans-font-GWebM-SemiBold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-SemiBold-Normal.woff;
+	--sans-font-GWebM-SemiBold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-SemiBold-Normal.woff2;
+	--sans-font-GWebM-SemiBold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-SemiBold-Italic.woff;
+	--sans-font-GWebM-SemiBold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-SemiBold-Italic.woff2;
+	--sans-font-GWebM-Bold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-Bold-Normal.woff;
+	--sans-font-GWebM-Bold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-Bold-Normal.woff2;
+	--sans-font-GWebM-Bold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-Bold-Italic.woff;
+	--sans-font-GWebM-Bold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-Bold-Italic.woff2;
+
+	/* ---- serif-font ------*/
+	--serif-font-GWeb-Regular-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWeb-Regular-Normal.woff;
+	--serif-font-GWeb-Regular-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWeb-Regular-Normal.woff2;
+	--serif-font-GWeb-Regular-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWeb-Regular-Italic.woff;
+	--serif-font-GWeb-Regular-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWeb-Regular-Italic.woff2;
+	--serif-font-GWeb-Bold-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWeb-Bold-Normal.woff;
+	--serif-font-GWeb-Bold-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWeb-Bold-Normal.woff2;
+	--serif-font-GWeb-Bold-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWeb-Bold-Italic.woff;
+	--serif-font-GWeb-Bold-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWeb-Bold-Italic.woff2;
+	--serif-font-GWebExt-Regular-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebExt-Regular-Normal.woff;
+	--serif-font-GWebExt-Regular-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebExt-Regular-Normal.woff2;
+	--serif-font-GWebExt-Regular-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebExt-Regular-Italic.woff;
+	--serif-font-GWebExt-Regular-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebExt-Regular-Italic.woff2;
+	--serif-font-GWebExt-Bold-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebExt-Bold-Normal.woff;
+	--serif-font-GWebExt-Bold-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebExt-Bold-Normal.woff2;
+	--serif-font-GWebExt-Bold-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebExt-Bold-Italic.woff;
+	--serif-font-GWebExt-Bold-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebExt-Bold-Italic.woff2;
+	--serif-font-GWebViet-Regular-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebViet-Regular-Normal.woff;
+	--serif-font-GWebViet-Regular-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebViet-Regular-Normal.woff2;
+	--serif-font-GWebViet-Regular-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebViet-Regular-Italic.woff;
+	--serif-font-GWebViet-Regular-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebViet-Regular-Italic.woff2;
+	--serif-font-GWebViet-Bold-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebViet-Bold-Normal.woff;
+	--serif-font-GWebViet-Bold-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebViet-Bold-Normal.woff2;
+	--serif-font-GWebViet-Bold-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebViet-Bold-Italic.woff;
+	--serif-font-GWebViet-Bold-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebViet-Bold-Italic.woff2;
+	--serif-font-GWebCyr-Regular-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyr-Regular-Normal.woff;
+	--serif-font-GWebCyr-Regular-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyr-Regular-Normal.woff2;
+	--serif-font-GWebCyr-Regular-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyr-Regular-Italic.woff;
+	--serif-font-GWebCyr-Regular-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyr-Regular-Italic.woff2;
+	--serif-font-GWebCyr-Bold-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyr-Bold-Normal.woff;
+	--serif-font-GWebCyr-Bold-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyr-Bold-Normal.woff2;
+	--serif-font-GWebCyr-Bold-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyr-Bold-Italic.woff;
+	--serif-font-GWebCyr-Bold-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyr-Bold-Italic.woff2;
+	--serif-font-GWebCyrExt-Regular-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyrExt-Regular-Normal.woff;
+	--serif-font-GWebCyrExt-Regular-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyrExt-Regular-Normal.woff2;
+	--serif-font-GWebCyrExt-Regular-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyrExt-Regular-Italic.woff;
+	--serif-font-GWebCyrExt-Regular-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyrExt-Regular-Italic.woff2;
+	--serif-font-GWebCyrExt-Bold-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyrExt-Bold-Normal.woff;
+	--serif-font-GWebCyrExt-Bold-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyrExt-Bold-Normal.woff2;
+	--serif-font-GWebCyrExt-Bold-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyrExt-Bold-Italic.woff;
+	--serif-font-GWebCyrExt-Bold-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyrExt-Bold-Italic.woff2;
+	--serif-font-GWebGr-Regular-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebGr-Regular-Normal.woff;
+	--serif-font-GWebGr-Regular-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebGr-Regular-Normal.woff2;
+	--serif-font-GWebGr-Regular-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebGr-Regular-Italic.woff;
+	--serif-font-GWebGr-Regular-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebGr-Regular-Italic.woff2;
+	--serif-font-GWebGr-Bold-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebGr-Bold-Normal.woff;
+	--serif-font-GWebGr-Bold-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebGr-Bold-Normal.woff2;
+	--serif-font-GWebGr-Bold-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebGr-Bold-Italic.woff;
+	--serif-font-GWebGr-Bold-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebGr-Bold-Italic.woff2;
+	--serif-font-GWebM-Regular-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebM-Regular-Normal.woff;
+	--serif-font-GWebM-Regular-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebM-Regular-Normal.woff2;
+	--serif-font-GWebM-Regular-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebM-Regular-Italic.woff;
+	--serif-font-GWebM-Regular-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebM-Regular-Italic.woff2;
+	--serif-font-GWebM-Bold-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebM-Bold-Normal.woff;
+	--serif-font-GWebM-Bold-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebM-Bold-Normal.woff2;
+	--serif-font-GWebM-Bold-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebM-Bold-Italic.woff;
+	--serif-font-GWebM-Bold-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebM-Bold-Italic.woff2;
+
+	/* ---- font-size-root ------*/
+	--font-size-root: 16px;
+
+	/* ---- font-size ------*/
+	--font-size-50: 0.625rem;
+	--font-size-100: 0.6875rem;
+	--font-size-200: 0.75rem;
+	--font-size-300: 0.875rem;
+	--font-size-400: 1rem;
+	--font-size: 1.125rem;
+	--font-size-500: 1.125rem;
+	--font-size-600: 1.25rem;
+	--font-size-700: 1.375rem;
+	--font-size-750: 1.5rem;
+	--font-size-800: 1.625rem;
+	--font-size-900: 1.75rem;
+	--font-size-1000: 1.875rem;
+	--font-size-1100: 2.25rem;
+	--font-size-1200: 3.25rem;
+	--font-size-1300: 3.375rem;
+
+	/* ---- line-height ------*/
+	--line-height-400: 1.2em;
+	--line-height: 1.4em;
+	--line-height-500: 1.4em;
+	--line-height-600: 1.6em;
+
+	/* ---- spacing ------*/
+	--spacing-100: 0.25rem;
+	--spacing-150: 0.375rem;
+	--spacing-200: 0.5rem;
+	--spacing-250: 0.625rem;
+	--spacing-300: 0.9375rem;
+	--spacing-350: 1.25rem;
+	--spacing-400: 1.625rem;
+	--spacing-450: 2.5rem;
+	--spacing: 3.75rem;
+	--spacing-500: 3.75rem;
+	--spacing-600: 4.75rem;
+	--spacing-700: 5.625rem;
+	--spacing-800: 7.5rem;
+	--spacing-900: 9.375rem;
+
+	/* ---- speed ------*/
+	--speed-400: 500ms;
+	--speed: 300ms;
+	--speed-500: 300ms;
+	--speed-600: 100ms;
+
+	/* ---- border-radius ------*/
+	--border-radius: 4px;
+	--border-radius-500: 4px;
+	--border-radius-600: 6px;
+}
+/*@import "eden-css-variables/eden-css-variables.css";*/
+:root {
+    /* VIO Colors */
+    --link: #177C9C;
+
+    --black120: #212225;
+    --black125: #0D0F10;
+
+    --blue10: #7DE3F4;
+    --blue20: #01B6D1;
+    --blue30: #006184;
+
+    --green20: #6DB344;
+
+    --grey2: #F7F8F8;
+    --grey3: #EFF0F0;
+    --grey5: #E0E2E2;
+    --grey10: #D0D0D3;
+    --grey20: #A9ADAD;
+    --grey40: #53575B;
+
+    --yellow10: #FFB81C;
+    --yellow20: #F68D2E;
+
+    --red10: #FC7473;
+
+    --white: #FFFFFF;
+
+    --error: var(--red10);
+    --warning: #FFD072;
+    --confirmation: #A3D287; 
+
+    --confirmation40: #74bb49;
+
+    /* VIO Spacing */
+    --spacing4: 0.25rem;    /* 4px */
+    --spacing8: 0.5rem;     /* 8px */
+    --spacing16: 1rem;      /* 16px */
+    --spacing32: 2rem;      /* 32px */
+    --spacing64: 4rem;      /* 64px */
+    --spacing128: 8rem;     /* 128px */
+
+    /* primary */
+    --theme-color-100: var(--blue);
+    --link-color: var(--blue-600);
+
+    /* secondary */
+
+    --theme-color-200: var(--green);
+    --theme-color-300: var(--blue-300);
+    --theme-color-400: var(--green-300);
+    --theme-color-500: var(--blue-600);
+
+    --side-panel-background: var(--grey2);
+
+    @custom-media --mq-50-only (min-width: 0em) and (max-width: 24.999em);
+    @custom-media --mq-reader (min-width: 77.5em);
+    @custom-media --mq-mobile (min-width: 46em);
+}
+/* Zoram light (300) normal */
+@font-face {
+    font-family: "Zoram";
+    font-weight: 300;
+    font-style: normal;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-Light-Normal.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-Light-Normal.woff") format("woff");
+}
+/* Zoram light (300) italic */
+@font-face {
+    font-family: "Zoram";
+    font-weight: 300;
+    font-style: italic;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-Light-Italic.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-Light-Italic.woff") format("woff");
+}
+/* Zoram regular (400) normal */
+@font-face {
+    font-family: "Zoram";
+    font-weight: 400;
+    font-style: normal;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-Regular-Normal.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-Regular-Normal.woff") format("woff");
+}
+/* Zoram regular (400) italic */
+@font-face {
+    font-family: "Zoram";
+    font-weight: 400;
+    font-style: italic;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-Regular-Italic.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-Regular-Italic.woff") format("woff");
+}
+/* Zoram semi-bold (600) normal */
+@font-face {
+    font-family: "Zoram";
+    font-weight: 600;
+    font-style: normal;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-SemiBold-Normal.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-SemiBold-Normal.woff") format("woff");
+}
+/* Zoram semi-bold (600) italic */
+@font-face {
+    font-family: "Zoram";
+    font-weight: 600;
+    font-style: italic;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-SemiBold-Italic.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-SemiBold-Italic.woff") format("woff");
+}
+/* Zoram bold (700) normal */
+@font-face {
+    font-family: "Zoram";
+    font-weight: 700;
+    font-style: normal;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-Bold-Normal.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-Bold-Normal.woff") format("woff");
+}
+/* Zoram bold (700) italic */
+@font-face {
+    font-family: "Zoram";
+    font-weight: 700;
+    font-style: italic;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-Bold-Italic.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-Bold-Italic.woff") format("woff");
+}
+/*******
+
+Pahoran
+
+*******/
+@font-face {
+    font-family: "Pahoran";
+    font-weight: 400;
+    font-style: Normal;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/pahoran/latest/Pahoran-GWebM-Regular-Normal.woff") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/pahoran/latest/Pahoran-GWebM-Regular-Normal.woff2") format("woff");
+}
+@font-face {
+    font-family: "Pahoran";
+    font-weight: 400;
+    font-style: Italic;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/pahoran/latest/Pahoran-GWebM-Regular-Italic.woff") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/pahoran/latest/Pahoran-GWebM-Regular-Italic.woff2") format("woff");
+}
+@font-face {
+    font-family: "Pahoran";
+    font-weight: 700;
+    font-style: Normal;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/pahoran/latest/Pahoran-GWebM-Bold-Normal.woff") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/pahoran/latest/Pahoran-GWebM-Bold-Normal.woff2") format("woff");
+}
+@font-face {
+    font-family: "Pahoran";
+    font-weight: 700;
+    font-style: Italic;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/pahoran/latest/Pahoran-GWebM-Bold-Italic.woff") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/pahoran/latest/Pahoran-GWebM-Bold-Italic.woff2") format("woff");
+}
+/*******
+
+McKay
+
+*******/
+/* McKay regular (400) normal */
+@font-face {
+    font-family: "McKay";
+    font-weight: 400;
+    font-style: normal;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/mckay/latest/McKay-GWebM-Regular-Normal.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/mckay/latest/McKay-GWebM-Regular-Normal.woff") format("woff");
+}
+/* McKay regular (400) italic */
+@font-face {
+    font-family: "McKay";
+    font-weight: 400;
+    font-style: italic;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/mckay/latest/McKay-GWebM-Regular-Italic.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/mckay/latest/McKay-GWebM-Regular-Italic.woff") format("woff");
+}
+/* McKay bold (700) normal */
+@font-face {
+    font-family: "McKay";
+    font-weight: 700;
+    font-style: normal;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/mckay/latest/McKay-GWebM-Bold-Normal.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/mckay/latest/McKay-GWebM-Bold-Normal.woff") format("woff");
+}
+/* McKay bold (700) italic */
+@font-face {
+    font-family: "McKay";
+    font-weight: 700;
+    font-style: italic;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/mckay/latest/McKay-GWebM-Bold-Italic.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/mckay/latest/McKay-GWebM-Bold-Italic.woff") format("woff");
+}
+/*******
+
+Myanmar
+
+*******/
+/* Myanmar regular (400) normal */
+@font-face {
+    font-family: "NotoSansMyanmar";
+    font-weight: 400;
+    font-style: normal;
+    src: local("NotoSansMyanmar-Regular"),
+        local("Noto Sans Myanmar Regular"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/NotoSansMyanmar/NotoSansMyanmar-Regular.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/NotoSansMyanmar/NotoSansMyanmar-Regular.woff") format("woff");
+}
+/* Myanmar regular (400) oblique */
+@font-face {
+    font-family: "NotoSansMyanmar";
+    font-weight: 400;
+    font-style: oblique;
+    src: local("NotoSansMyanmar-Regular"),
+        local("Noto Sans Myanmar Regular"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/NotoSansMyanmar/NotoSansMyanmar-Regular.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/NotoSansMyanmar/NotoSansMyanmar-Regular.woff") format("woff");
+}
+/* Myanmar bold (700) normal */
+@font-face {
+    font-family: "NotoSansMyanmar";
+    font-weight: 700;
+    font-style: normal;
+    src: local("NotoSansMyanmar-Bold"),
+        local("Noto Sans Myanmar Bold"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/NotoSansMyanmar/NotoSansMyanmar-Bold.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/NotoSansMyanmar/NotoSansMyanmar-Bold.woff") format("woff");
+}
+/* Myanmar bold (700) oblique */
+@font-face {
+    font-family: "NotoSansMyanmar";
+    font-weight: 700;
+    font-style: oblique;
+    src: local("NotoSansMyanmar-Bold"),
+        local("Noto Sans Myanmar Bold"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/NotoSansMyanmar/NotoSansMyanmar-Bold.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/NotoSansMyanmar/NotoSansMyanmar-Bold.woff") format("woff");
+}
+:root {
+    /* VIO Font Sizes */
+    --fontSize11: 0.6875rem;
+    --fontSize13: 0.8125rem;
+    --fontSize14: 0.875rem;
+    --fontSize16: 1rem;
+    --fontSize18: 1.125rem;
+    --fontSize20: 1.25rem;
+    --fontSize28: 1.75rem;
+    --fontSize32: 2rem;
+    --fontSize42: 2.625rem;
+
+
+    /* VIO Line Height */
+    --lineHeightTight: 1.2;
+    --lineHeight: 1.4;
+    --lineHeightLoose: 1.6;
+
+    --h1-sans: normal normal bold var(--font-size-1300)/var(--line-height-400) var(--sans);
+    --h2-sans: normal normal 100 var(--font-size-800)/var(--line-height-400) var(--sans);
+    --h3-sans: normal normal bold var(--font-size-400)/var(--line-height-400) var(--sans);
+    --h5-sans: normal normal bold var(--font-size-500)/var(--line-height-400) var(--sans);
+
+    --h1-serif: normal normal normal var(--font-size-1300)/var(--line-height-400) var(--serif);
+    --h1-serif-informal: italic normal bold var(--font-size-1200)/var(--line-height-400) var(--serif);
+    --h4-serif: normal normal normal var(--font-size-500)/var(--line-height-400) var(--serif);
+    --h6-serif: italic normal normal var(--font-size-500)/var(--line-height-400) var(--serif);
+}
+body {
+    padding: 0 !important;
+    font-size: 1.125rem;
+    font-size: var(--font-size);
+    font-family: 'Open Sans', Zoram, NotoSansMyanmar, 'noto sans', Helvetica, Arial, sans-serif;
+    font-family: var(--sans);
+    line-height: 1.4em;
+    line-height: var(--line-height);
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* additional reset rules*/
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  font: normal normal 400 var(--font-size-400)/var(--line-height-600) var(--sans);
+  font-weight: 400;
+}
+
+body {
+  font-weight: 400;
+  font-size: var(--font-size);
+}
+
+strong, b {
+    font-weight: bold
+}
+
+i, cite, em, var, address, dfn {
+    font-style: italic;
+}
+
+button, input, optgroup, select, textarea {
+    font-size: 100%;
+}
+
+body {
+    color: var(--black-800);
+}
+
+a {
+    color: var(--blue);
+    text-decoration: none
+}
+
+a:hover {
+        text-decoration: underline;
+    }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--sans);
+    /*margin: 0 0 var(--spacing-300);*/
+}
+
+h1 {
+    font: normal normal normal var(--font-size-1200)/var(--line-height-400) var(--sans);
+    font-weight: 300;
+}
+
+h2 {
+    font-size: var(--font-size-900);
+    line-height: 1.2;
+    font-weight: 100;
+}
+
+h3, h4, h5, h6 {
+    font-size: var(--font-size-500);
+    font-weight: bold;
+}
+
+h3 {
+    line-height: 1.278;
+    letter-spacing: 0.00278em;
+    /*text-transform: uppercase;*/
+}
+
+h4, h5, h6, {
+    line-height: 1.222;
+}
+
+dt {
+    font-size: var(--font-size-500);
+    font-style: italic;
+    font-weight: 400;
+    line-height: var(--line-height-400);
+}
+
+dd {
+    margin: 0;
+    /*margin-left: var(--spacing-500);*/
+}
+
+code {
+    font-family: var(--mono);
+    white-space: pre-wrap;
+}
+
+.additionalTiles-meKM5 {
+
+}
+
+.gospelLibrary-TG5LM {
+	margin-top: var(--spacing-400);
+	position: relative
+}
+
+.gospelLibrary-TG5LM .libraryTitle-23T0I {
+		font: var(--h1-serif);
+		font-size: var(--font-size);
+		padding-bottom: var(--spacing-100);
+		display: block;
+		width: 100%;
+		border-bottom: 1px solid var(--black-400);
+	}
+
+.hero-34b0i {
+  margin-bottom: 1rem;
+}
+
+.link-1YX7b {
+  float: right;
+}
+
+.header-2k7Nn {
+    padding: 2vh 1vw;
+}
+
+.title-3336G,
+.subtitle-1iCyt {
+    font-weight: normal;
+    margin: 0;
+}
+
+.subtitle-1iCyt {
+    font: normal .95em/1 "serif";
+}
+
+.pageTitle-2vDFR {
+    font-size: var(--font-size-1100);
+    line-height: 1.2em;
+    font-family: var(--serif);
+    display: block;
+    text-align: center;
+    margin-bottom: var(--spacing-400)
+}
+
+@media (min-width: 0em) and (max-width: 37.499em) {
+
+.pageTitle-2vDFR {
+        font-size: var(--font-size-900)
+}
+    }
+
+.articleBody-17s0O {
+    line-height: 1.4;
+}
+
+.narrow-1cp7X {
+    margin: var(--spacing-500) 5%;
+	position: relative
+}
+
+@media (min-width: 37.5em){
+
+.narrow-1cp7X {
+        margin: var(--spacing-500) 18%
+}
+    }
+
+.full-1CEfI {
+    margin: var(--spacing-500) 5%;
+	position: relative
+}
+
+@media (min-width: 60em) {
+
+.full-1CEfI {
+        margin: var(--spacing-500) 10%
+}
+    }
+
+.bleed-3I_cM {
+    margin: var(--spacing-500) 0;
+	position: relative;
+}
+
+.narrowTop-1T98O {
+    margin: var(--spacing-350) 5% var(--spacing-500) 5%;
+	position: relative
+}
+
+@media (min-width: 60em) {
+
+.narrowTop-1T98O {
+        margin: var(--spacing-350) auto var(--spacing-500);
+        max-width: 960px
+}
+    }
+
+.narrowReader-3kDAO {
+	padding: 0 2rem var(--spacing64);
+	position: relative
+}
+
+@media (min-width: 46em) {
+
+.narrowReader-3kDAO {
+        padding: 0 4rem var(--spacing16)
+}
+    }
+
+@media print{
+
+.narrowReader-3kDAO {
+        padding: 0
+}
+    }
+
+@media (min-width: 0em) and (max-width: 24.999em) {
+    .full-1CEfI {
+        margin: var(--spacing-450) 5%;
+    }
+}
+
+.loading-2e-J5 {
+	background: var(--white);
+	position: absolute;
+    left: 50%
+}
+
+
+.loading-2e-J5 .loader-3eRCU {
+		margin-top: 100px;
+		display: flex;
+		align-items: center;
+		justify-content: center
+	}
+
+
+.loading-2e-J5 .loader-3eRCU .outerLoader-1t1AG {
+			border: 3px solid var(--black-200);
+		    border-top: 3px solid var(--blue);
+			border-radius: 50%;
+			position: absolute;
+		    width: 4vw;
+		    height: 4vw;
+		    -webkit-animation: spin-3iQF5 1.5s linear infinite;
+		            animation: spin-3iQF5 1.5s linear infinite
+		}
+
+
+@media (min-width: 0em) and (max-width: 37.499em) {
+
+
+.loading-2e-J5 .loader-3eRCU .outerLoader-1t1AG {
+				width: 25vw;
+				height: 25vw
+		}
+			}
+
+
+.loading-2e-J5 .loader-3eRCU .innerLoader-3HbgL {
+		    border: 6px solid var(--black-200);
+		    border-top: 6px solid var(--blue);
+		    border-radius: 50%;
+		    width: 8vw;
+		    height: 8vw;
+		    -webkit-animation: innerSpin-2lE76 1.4s linear infinite;
+		            animation: innerSpin-2lE76 1.4s linear infinite
+		}
+
+
+@media (min-width: 0em) and (max-width: 37.499em) {
+
+
+.loading-2e-J5 .loader-3eRCU .innerLoader-3HbgL {
+				width: 19vw;
+				height: 19vw
+		}
+			}
+
+
+@-webkit-keyframes spin-3iQF5 {
+    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+
+@keyframes spin-3iQF5 {
+    0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
+
+
+@-webkit-keyframes innerSpin-2lE76 {
+    0% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+    100% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+}
+
+
+@keyframes innerSpin-2lE76 {
+    0% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+    100% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+}
+
+.tileGroup-2FfbK {
+	margin-bottom: var(--spacing-250);
+
+}
+
+.title-CXvK1 {
+    display: block;
+    /*font: var(--h3-sans);*/
+    font-size: var(--font-size-300);
+    text-transform: uppercase;
+    margin: var(--spacing-500) 0 0
+}
+
+@media (min-width: 0em) and (max-width: 37.499em) {
+
+.title-CXvK1 {
+        margin-top: var(--spacing-300)
+}
+    }
+
+/* layout */
+
+.tiles-2ak6Y {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tile-7WLI6 {
+    width: 100%
+    /*padding-bottom: var(--spacing-350);*/
+    /*margin-bottom: var(--spacing-400);*/
+}
+
+@media (min-width: 37.5em){
+
+.tile-7WLI6 {
+        width: 49%
+}
+    }
+
+@media (min-width: 60em){
+
+.tile-7WLI6 {
+        width: 32%
+}
+    }
+
+@media (min-width: 37.5em){
+
+.twoUp-3-kY1 .tile-7WLI6 {
+        width: 49%
+        /*padding-bottom: var(--spacing-400);*/
+        /*margin-bottom: var(--spacing-500);*/
+}
+    }
+
+@media (min-width: 37.5em){
+
+.threeUp-45x6s .tile-7WLI6 {
+        width: 32%
+        /*padding-bottom: var(--spacing-400);*/
+        /*margin-bottom: var(--spacing-500);*/
+}
+    }
+
+.fourUp-28nMf .tile-7WLI6 .mediaContainer-3xwPe {
+		height: 20vw;
+		border: 1px solid red;
+
+	}
+
+@media (min-width: 37.5em){
+
+.fourUp-28nMf .tile-7WLI6 {
+        width: 49%
+        /*padding-bottom: var(--spacing-400);*/
+        /*margin-bottom: var(--spacing-500);*/
+}
+    }
+
+@media (min-width: 60em){
+
+.fourUp-28nMf .tile-7WLI6 {
+        width: 24%;
+        padding-bottom: var(--spacing-400)
+        /*margin-bottom: var(--spacing-500);*/
+}
+    }
+
+.oneFeature-3Qt7m .tile-7WLI6 {
+	width: 100%;
+}
+
+@media (min-width: 37.5em){
+
+.twoFeature-XfCRY .tile-7WLI6 {
+        width: 49%
+}
+    }
+
+@media (min-width: 60em){
+
+.twoFeature-XfCRY .tile-7WLI6 {
+        width: 24%
+}
+    }
+
+.twoFeature-XfCRY .tile-7WLI6:first-child, .twoFeature-XfCRY .tile-7WLI6:nth-child(2){
+
+    width: 100%
+}
+
+@media (min-width: 60em){
+
+.twoFeature-XfCRY .tile-7WLI6:first-child, .twoFeature-XfCRY .tile-7WLI6:nth-child(2){
+        width: 49%
+}
+    }
+
+.threeFeature-LmTci {
+	margin-bottom: var(--spacing-250)
+}
+
+.threeFeature-LmTci .tile-7WLI6 {
+        width: 100%;
+        height: 50vw;
+        margin-bottom: 2%;
+        padding-bottom: 0;
+        border: none;
+    }
+
+.threeFeature-LmTci .tile-7WLI6:nth-child(2), .threeFeature-LmTci .tile-7WLI6:nth-child(3) {
+        height: 16.25vw
+    }
+
+.threeFeature-LmTci .tile-7WLI6:nth-child(2) > .imageContainer-HucpP, .threeFeature-LmTci .tile-7WLI6:nth-child(3) > .imageContainer-HucpP {
+            height: 100%;
+        }
+
+@media (min-width: 37.5em){
+        .threeFeature-LmTci .tile-7WLI6 {
+            width: 49%;
+            /*height: 33vw;*/
+        }
+        .threeFeature-LmTci .tile-7WLI6:first-child {
+            width: 100%;
+            margin-bottom: 1vw;
+        }
+        .threeFeature-LmTci .tile-7WLI6:nth-child(2), .threeFeature-LmTci .tile-7WLI6:nth-child(3) {
+            width: 49.5%;
+            /*height: 33vw;*/
+        }
+    }
+
+@media (min-width: 60em){
+
+.threeFeature-LmTci {
+        position: relative
+}
+        .threeFeature-LmTci .tile-7WLI6 {
+            width: 24.3%;
+        }
+        .threeFeature-LmTci .tile-7WLI6:first-child {
+            width: 62.5%;
+            margin-right: .5%;
+            margin-bottom: 0;
+        }
+        .threeFeature-LmTci .tile-7WLI6:nth-child(2), .threeFeature-LmTci .tile-7WLI6:nth-child(3) {
+            width: 37%;
+            height: 16.25vw;
+            margin-bottom: 0;
+        }
+        .threeFeature-LmTci .tile-7WLI6:nth-child(3) {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+_:-moz-any-link .tile-7WLI6:nth-child(2), _:-moz-any-link .tile-7WLI6:nth-child(3), :root .threeFeature-LmTci .tile-7WLI6:nth-child(2), :root .threeFeature-LmTci .tile-7WLI6:nth-child(3) {
+        height: 16vw;
+    }
+
+@supports ((display: grid) and (grid-template-areas: "a b c")) {
+    /* undo what was done above */
+    .tiles-2ak6Y {
+        display: block;
+    }
+
+    .tile-7WLI6 {
+        width: 100%
+    }
+
+        @media (min-width: 37.5em){
+
+    .tile-7WLI6 {
+            width: 100%
+    }
+        }
+
+        @media (min-width: 60em){
+
+    .tile-7WLI6 {
+            width: 100%
+    }
+        }
+        @media (min-width: 37.5em){
+
+    .twoUp-3-kY1 .tile-7WLI6 {
+            width: 100%
+    }
+        }
+		.fourUp-28nMf .tile-7WLI6 .mediaContainer-3xwPe {
+			height: 19vw;
+		}
+        @media (min-width: 37.5em){
+
+    .fourUp-28nMf .tile-7WLI6 {
+            width: 100%
+    }
+        }
+        @media (min-width: 60em){
+
+    .fourUp-28nMf .tile-7WLI6 {
+            width: 100%
+    }
+        }
+        @media (min-width: 37.5em){
+
+    .twoFeature-XfCRY .tile-7WLI6 {
+            width: 100%
+    }
+        }
+        @media (min-width: 60em){
+
+    .twoFeature-XfCRY .tile-7WLI6 {
+            width: 100%
+    }
+        }
+
+    .twoFeature-XfCRY .tile-7WLI6:first-child, .twoFeature-XfCRY .tile-7WLI6:nth-child(2){
+
+        width: 100%
+    }
+
+        @media (min-width: 60em){
+
+    .twoFeature-XfCRY .tile-7WLI6:first-child, .twoFeature-XfCRY .tile-7WLI6:nth-child(2){
+            width: 100%
+    }
+        }
+
+
+        .threeFeature-LmTci .tile-7WLI6 {
+            width: 100%;
+        }
+        .threeFeature-LmTci .tile-7WLI6:first-child {
+            margin-bottom: 0;
+            /*height: 33vw;*/
+        }
+        .threeFeature-LmTci .tile-7WLI6:nth-child(2), .threeFeature-LmTci .tile-7WLI6:nth-child(3) {
+            margin-bottom: 0;
+        }
+
+        @media (min-width: 37.5em){
+            .threeFeature-LmTci .tile-7WLI6 {
+                width: 100%;
+            }
+            .threeFeature-LmTci .tile-7WLI6:first-child {
+                width: 100%;
+            }
+            .threeFeature-LmTci .tile-7WLI6:nth-child(2), .threeFeature-LmTci .tile-7WLI6:nth-child(3) {
+                width: 100%;
+            }
+        }
+        @media (min-width: 60em){
+
+    .threeFeature-LmTci {
+            position: static
+    }
+            .threeFeature-LmTci .tile-7WLI6 {
+                width: 100%;
+            }
+            .threeFeature-LmTci .tile-7WLI6:first-child {
+                width: 100%;
+                /*height: auto;*/
+                margin-bottom: 0;
+            }
+            .threeFeature-LmTci .tile-7WLI6:nth-child(2), .threeFeature-LmTci .tile-7WLI6:nth-child(3) {
+                width: 100%;
+                /*height: auto;*/
+            }
+            .threeFeature-LmTci .tile-7WLI6:nth-child(3) {
+                position: relative;
+                right: 0;
+                top: 0;
+            }
+        }
+
+    /* now lay it out on the grid */
+    .tiles-2ak6Y {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-gap: var(--spacing-250)
+    }
+
+        @media (min-width: 37.5em){
+    .tiles-2ak6Y {
+            grid-template-columns: repeat(2, 1fr)
+    }
+        }
+
+        @media (min-width: 60em){
+    .tiles-2ak6Y {
+            grid-template-columns: repeat(3, 1fr)
+    }
+        }
+
+    .twoUp-3-kY1 .tiles-2ak6Y {
+        grid-template-columns: 1fr;
+    }
+
+        @media (min-width: 37.5em){
+
+    .twoUp-3-kY1 .tiles-2ak6Y {
+            grid-template-columns: repeat(2, 1fr);
+    }
+        }
+
+    .twoUp-3-kY1 .tiles-2ak6Y {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .threeUp-45x6s .tiles-2ak6Y {
+        grid-template-columns: 1fr;
+    }
+
+        @media (min-width: 37.5em){
+
+    .threeUp-45x6s .tiles-2ak6Y {
+            grid-template-columns: repeat(3, 1fr);
+    }
+        }
+
+    .threeUp-45x6s .tiles-2ak6Y {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .fourUp-28nMf .tiles-2ak6Y {
+        grid-template-columns: 1fr
+    }
+
+        @media (min-width: 37.5em){
+
+    .fourUp-28nMf .tiles-2ak6Y {
+            grid-template-columns: repeat(2, 1fr)
+    }
+        }
+
+        @media (min-width: 60em){
+
+    .fourUp-28nMf .tiles-2ak6Y {
+            grid-template-columns: repeat(4, 1fr)
+    }
+        }
+
+    .tile-7WLI6 {
+        width: 100%;
+    }
+
+    .twoUp-3-kY1 .tile-7WLI6 {
+        width: 100%;
+    }
+
+    .threeUp-45x6s .tile-7WLI6 {
+        width: 100%;
+    }
+
+    .fourUp-28nMf .tile-7WLI6 {
+        width: 100%;
+    }
+
+	.oneFeature-3Qt7m {
+
+		height: 0;
+		position: relative;
+		padding-bottom: 37.5% /* 8X3 ratio */
+	}
+
+		.oneFeature-3Qt7m .tiles-2ak6Y {
+			grid-template-columns: repeat(1, 1fr);
+		}
+
+		.oneFeature-3Qt7m .tile-7WLI6 {
+			grid-column: span 1;
+			height: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+        .twoFeature-XfCRY .tiles-2ak6Y {
+            grid-template-columns: repeat(1, 1fr);
+			grid-template-rows: repeat(2, 50vw);
+        }
+        .twoFeature-XfCRY .tile-7WLI6 {
+            grid-column: span 1;
+			grid-row: span 1;
+        }
+        .twoFeature-XfCRY .tile-7WLI6:first-child, .twoFeature-XfCRY .tile-7WLI6:nth-child(2){
+            width: 100%;
+            grid-column: span 1;
+        }
+        @media (min-width: 37.5em){
+			.twoFeature-XfCRY .tiles-2ak6Y{
+			    grid-template-columns: repeat(2, 1fr);
+				grid-template-rows: repeat(1, 39.5vw);
+			}
+            .twoFeature-XfCRY .tile-7WLI6 {
+                grid-column: span 1;
+            }
+            .twoFeature-XfCRY .tile-7WLI6:first-child, .twoFeature-XfCRY .tile-7WLI6:nth-child(2){
+                width: 100%;
+                grid-column: span 1;
+            }
+        }
+        @media (min-width: 60em){
+            .twoFeature-XfCRY .tile-7WLI6 {
+                grid-column: span 1;
+            }
+            .twoFeature-XfCRY .tile-7WLI6:first-child, .twoFeature-XfCRY .tile-7WLI6:nth-child(2){
+                width: 100%;
+                grid-column: span 1;
+            }
+        }
+        .threeFeature-LmTci .tiles-2ak6Y {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: repeat(10, 12vw);
+        }
+        .threeFeature-LmTci .tile-7WLI6 {
+            display: block;
+            width: 100%;
+            grid-column: span 1;
+        }
+		.threeFeature-LmTci .tile-7WLI6:first-child {
+			grid-column: span 2;
+			grid-row: span 4;
+			height: 100%;
+		}
+        .threeFeature-LmTci .tile-7WLI6:nth-child(2), .threeFeature-LmTci .tile-7WLI6:nth-child(3) {
+            grid-column: span 2;
+			grid-row: span 3;
+			height: 100%
+        }
+
+            .threeFeature-LmTci .tile-7WLI6:nth-child(2) > .imageContainer-HucpP, .threeFeature-LmTci .tile-7WLI6:nth-child(3) > .imageContainer-HucpP {
+                height: 100%;
+            }
+
+			.threeFeature-LmTci .tile-7WLI6:nth-child(2) > .title-CXvK1, .threeFeature-LmTci .tile-7WLI6:nth-child(3) > .title-CXvK1 {
+				font-size: var(--font-size-500);
+			}
+
+        @media (min-width: 37.5em){
+			.threeFeature-LmTci .tiles-2ak6Y {
+				grid-template-rows: repeat(5, 15vw);
+			}
+
+            .threeFeature-LmTci .tile-7WLI6 {
+                grid-column: span 1;
+            }
+			.threeFeature-LmTci .tile-7WLI6:first-child {
+				grid-column: span 2;
+				grid-row: span 3;
+			}
+            .threeFeature-LmTci .tile-7WLI6:nth-child(2), .threeFeature-LmTci .tile-7WLI6:nth-child(3) {
+                grid-column: span 1;
+                grid-row: span 2;
+            }
+        }
+        @media (min-width: 60em){
+			.threeFeature-LmTci .tiles-2ak6Y {
+				grid-template-rows: repeat(2, 200px);
+			}
+            .threeFeature-LmTci .tile-7WLI6 {
+                grid-column: span 1;
+            }
+            .threeFeature-LmTci .tile-7WLI6:nth-child(2), .threeFeature-LmTci .tile-7WLI6:nth-child(3) {
+                grid-column: span 1;
+                grid-row: span 1
+            }
+
+				.threeFeature-LmTci .tile-7WLI6:nth-child(2) > .teaser-1beUF, .threeFeature-LmTci .tile-7WLI6:nth-child(3) > .teaser-1beUF {
+					display: none;
+				}
+            .threeFeature-LmTci .tile-7WLI6:first-child {
+                grid-column: span 1;
+                grid-row: span 2;
+            }
+        }
+}
+
+.additionalTiles-1AiQn .title-CXvK1 {
+		margin: 0;
+	}
+
+.additionalTiles-1AiQn > .teaser-1beUF {
+		display: none;
+	}
+
+.tile-3a2-G {
+    display: block;
+    color: var(--black-800);
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden
+}
+
+.tile-3a2-G:hover {
+        text-decoration: none;
+    }
+
+@media (min-width: 0em) and (max-width: 37.499em) {
+
+.tile-3a2-G {
+        padding-bottom: var(--spacing-400)
+}
+    }
+
+@media (min-width: 37.5em) and (max-width: 59.999em) {
+
+.tile-3a2-G {
+        padding-bottom: var(--spacing-400)
+}
+    }
+
+.textContainer-3Y7_2 {
+    padding: 0 var(--spacing-100);
+}
+
+.mediaContainer-mLCfR {
+    position: relative;
+    height: 50vw;
+    width: 100%
+}
+
+@media (min-width: 37.5em) {
+
+.mediaContainer-mLCfR {
+        height: 25vw
+}
+    }
+
+@media (min-width: 60em) {
+
+.mediaContainer-mLCfR {
+        height: 19vw
+}
+    }
+
+.mediaContainer-mLCfR img {
+        height: 100%;
+        width: 100%;
+        display: block;
+        -o-object-fit: cover;
+           object-fit: cover;
+    }
+
+@media (min-width: 60em) {
+
+.mediaContainer-mLCfR.square-U06tA {
+            height: 0;
+            padding-top: 100%
+    }
+
+            .mediaContainer-mLCfR.square-U06tA figure, .mediaContainer-mLCfR.square-U06tA .isVideo-2a32b {
+                position: absolute;
+                top: 0;
+            }
+        }
+
+.isVideo-2a32b {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+    width: 100%;
+    height: 100%
+}
+
+.isVideo-2a32b .videoIcon-3-TIs {
+        background: transparent;
+        color: var(--white);
+        width: var(--spacing-450);
+        height: var(--spacing-450);
+        border: 2px solid var(--white);
+        border-radius: 50%;
+        padding: 2px;
+        box-shadow: inset 0px 0px 15px var(--black), 0px 0px 10px var(--black)
+    }
+
+.isVideo-2a32b .videoIcon-3-TIs svg {
+            -webkit-filter: drop-shadow(0px 0px 5px var(--black));
+            filter: drop-shadow(0px 0px 5px var(--black));
+            padding-left: 3px;
+        }
+
+.title-2dV1O {
+    font-family: var(--serif);
+    font-size: var(--font-size);
+    line-height: var(--line-height-400);
+    color: var(--blue);
+    font-weight: 500;
+    margin: var(--spacing-200) 0;
+    display: block
+}
+
+@media (min-width: 0em) and (max-width: 37.499em) {
+
+.title-2dV1O {
+        margin-bottom: var(--spacing-250)
+}
+    }
+
+.teaser-3KPeR {
+    font-weight: 300;
+    margin: 0;
+    font-size: var(--font-size-300);
+    line-height: var(--line-height-600);
+}
+
+.overlay-3iA3b {
+    position: relative;
+    padding-bottom: 0
+}
+
+.overlay-3iA3b .textContainer-3Y7_2 {
+        position: absolute;
+        width: 100%;
+        bottom: 0;
+        left: 0;
+        background: var(--black-300-t);
+        background: linear-gradient(0, var(--black-700-t), rgba(0, 0, 0, 0));
+        background: -moz-linear-gradient(90deg, var(--black-700-t), rgba(0, 0, 0, 0));
+        color: var(--white);
+        padding: var(--spacing-300) var(--spacing-400);
+        font-weight: 300;
+    }
+
+.overlay-3iA3b .title-2dV1O {
+        font-weight: 300;
+        font-style: normal;
+        font-family: var(--serif);
+        font-size: var(--font-size-700);
+        line-height: var(--line-height-400);
+        margin: 0;
+        color: var(--white);
+    }
+
+.overlay-3iA3b .mediaContainer-mLCfR {
+        height: 100%
+    }
+
+.overlay-3iA3b .mediaContainer-mLCfR img {
+            -o-object-fit: cover;
+               object-fit: cover;
+        }
+
+.overlay-3iA3b .objectFitFallbackContainer-1O24O {
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+.overlay-3iA3b .teaser-3KPeR {
+        display: none;
+    }
+
+.featured-3LL2k .title-2dV1O {
+        font-size: var(--font-size-700);
+        line-height: var(--line-height-400);
+    }
+
+.featured-3LL2k > .teaser-3KPeR {
+        line-height: var(--line-height-400);
+        font-weight: 100;
+        font-size: var(--font-size-400);
+        display: none
+    }
+
+@media (min-width: 37.5em) {
+
+.featured-3LL2k > .teaser-3KPeR {
+            display: block;
+            font-size: var(--font-size-600)
+    }
+        }
+
+.mediaContainer-1TplQ {
+    display: block;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.imageContainer-RAyjg {
+    position: relative;
+    height: 100%;
+}
+
+.image-o9iU9 {
+    display: block;
+    width: 100%;
+}
+
+.copyright-15lR- {
+    position: absolute;
+    left: var(--spacing-200);
+    bottom: 0;
+    color: var(--black-500);
+    font-size: var(--font-size-50);
+}
+
+.posterFrame-Rwmyl {
+    position: relative
+}
+
+.posterFrame-Rwmyl .playButton-3hbBq {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+        color: var(--white);
+        background: var(--black-300-t);
+        border-radius: 50%;
+        height: var(--spacing);
+        width: var(--spacing);
+        padding: .1em;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+.video-AdifJ {
+    width: 100%;
+    position: relative;
+}
+
+.video-AdifJ iframe {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.caption-15gdD {
+    display: block;
+    margin: var(--spacing-100) 0 0;
+    color: var(--black-500);
+    text-align: left;
+    font-size: var(--font-size-300)
+}
+
+.widthHeightWrapper-1CY7d {
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+}
+
+[data-aid-version] img {
+    width: 100%;
+}
+
+.lazy-xyQQ2 {
+    overflow: hidden
+}
+
+.lazy-xyQQ2::after {
+        display: block;
+        background: var(--grey5);
+        height: 100%;
+        position: relative;
+    }
+
+
+
+    .HTMLRenderer-248RS > :first-child {
+        margin-top: 0;
+    }
+.HTMLRenderer-248RS > :last-child {
+        margin-bottom: 0;
+    }
+
+.container-34Nbn {
+    position: relative;
+    width: 100%
+}
+.container-34Nbn .child-2Rk4q {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
+
+.tileRow-3ETk4 {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1
+}
+
+.tileRow-3ETk4::after {
+        content: '';
+        flex: auto;
+    }
+
+.tile-3KqhL {
+    width: 15%;
+    margin: .5vw .83% 0;
+    display: block;
+    color: var(--black-800);
+    text-decoration: none;
+    cursor: pointer;
+    padding-bottom: var(--spacing-400)
+}
+
+.tile-3KqhL:hover {
+        text-decoration: none;
+    }
+
+@media (min-width: 0em) and (max-width: 37.499em) {
+
+.tile-3KqhL {
+        width: 30.75%;
+        margin: .5vw 1.25% 0
+}
+    }
+
+@media (min-width: 37.5em) and (max-width: 59.999em){
+
+.tile-3KqhL {
+        width: 22.5%;
+        margin: .5vw 1.25% 0
+}
+
+    }
+
+.placeholder-3bAt- {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-top: 133.58%;
+    outline: 1px solid var(--black-400);
+    background: var(--grey5);
+}
+
+.tileImg-vFoPT {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+}
+
+.textContainer-LYXp3 {
+    padding: 0 var(--spacing-100);
+}
+
+.rowTitle-2h5HV {
+    font-family: var(--sans);
+    font-size: var(--font-size);
+    font-weight: 500;
+    font-style: italic;
+    margin: var(--spacing-300) 0;
+    display: block
+}
+
+@media (min-width: 0em) and (max-width: 37.499em) {
+
+.rowTitle-2h5HV {
+        margin-bottom: var(--spacing-250)
+}
+    }
+
+.tileTitle-1aoed {
+    text-align: center;
+    font-weight: 300;
+    display: block;
+    font-size: var(--font-size-300);
+    line-height: var(--line-height);
+    margin-top: var(--spacing-200)
+
+}
+
+@media (min-width: 37.5em) {
+
+.tileTitle-1aoed {
+
+}
+    }
+
+@media (min-width: 60em) {
+
+.tileTitle-1aoed {
+        margin-top: var(--spacing-300)
+
+}
+    }
+
+.annotation--Glx6 {
+    font-family: var(--sans);
+    background: var(--white);
+    word-wrap: break-word;
+}
+
+.annotationHeader-38T7g {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    font-size: var(--font-size-300);
+}
+
+.callout-1nWR5[class] {
+    position: absolute;
+    top: calc(100% + 9px);
+}
+
+[dir="ltr"] .callout-1nWR5[class] {
+    right: 0;
+}
+
+[dir="rtl"] .callout-1nWR5[class] {
+    left: 0;
+}
+
+.calloutInner-fh4V8 {
+    padding: 1em;
+    text-align: left
+}
+
+.calloutInner-fh4V8:focus{
+        outline: none;
+    }
+
+.calloutInner-fh4V8 li {
+        cursor: pointer
+    }
+
+.calloutInner-fh4V8 li[disabled] {
+            color: grey;
+            cursor: auto;
+        }
+
+.calloutInner-fh4V8 li:not(:first-of-type) {
+            margin-top: 1em;
+        }
+
+.calloutInner-fh4V8 li:not(:last-of-type) {
+            margin-bottom: 1em;
+        }
+
+.timestamp-22_kU {
+    color: #878a8c; /* grey30 */
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size-200);
+    font-weight: 400;
+}
+
+.note-1mYEo {
+    font-size: var(--font-size-300);
+    line-height: 1.4
+}
+
+.note-1mYEo .title-vQQRI {
+        font-size: inherit;
+        line-height: 16.8px;
+        font-weight: 600;
+        margin-top: .5em;
+    }
+
+.card-IOc08 {
+    margin-top: var(--spacing-400);
+}
+
+.tags-1s6wo {
+    margin-top: var(--spacing-200);
+}
+
+.folders-3AFC3 {
+    margin-top: var(--spacing-200);
+}
+
+.folder-2MVm1 {
+    display: flex;
+    align-items: center;
+    margin-top: var(--spacing-200)
+}
+
+.folder-2MVm1 svg {
+        margin-right: var(--spacing-100);
+        flex-shrink: 0;
+    }
+
+.highlight-3TUJq {
+    font-family: var(--serif);
+    font-size: var(--font-size-400);
+    line-height: 1.375
+}
+
+.highlight-3TUJq[data-aid] a {
+        color: inherit;
+        pointer-events: none;
+    }
+
+.highlight-3TUJq sup {
+        display: none;
+    }
+
+.highlight-3TUJq iframe + * {
+        padding-top: 0;
+    }
+
+.highlight-3TUJq > :last-child {
+        padding-bottom: 0;
+    }
+
+.simple-14e1o {
+    max-height: 110px;
+    overflow: hidden;
+    position: relative
+}
+
+.simple-14e1o.fadeOut-1WZz8::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        display: block;
+        height: 25%;
+        background: linear-gradient(to top, rgba(255,255,255,1), rgba(255,255,255,0));
+    }
+
+.simple-14e1o.annotation--Glx6 {
+        color: #212225; /* onyxtext */
+    }
+
+.simple-14e1o .timestamp-22_kU {
+        margin-bottom: var(--spacing-100);
+    }
+
+.simple-14e1o .folder-2MVm1 {
+        color: #212225; /* onyxtext */
+        pointer-events: none;
+    }
+
+.simple-14e1o .tags-1s6wo {
+        pointer-events: none;
+    }
+
+.annotationCard-3QcrE {
+    padding: var(--spacing-300);
+}
+
+.innerWrapper-36YIh {
+    display: inline-block;
+    margin: -var(--spacing-250) 0 0 -var(--spacing-250);
+    width: 100%;
+}
+
+.tag-2CJ4p {
+    display: inline-flex;
+    align-items: center;
+    margin: var(--spacing-250) 0 0 var(--spacing-250);
+    vertical-align: baseline;
+    max-width: 100%
+}
+
+.tag-2CJ4p span {
+        display: inline-block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+
+.iconButton--V5Iv {
+    align-items: center;
+    background-color: transparent;
+    border: none;
+    color: var(--black);
+    cursor: pointer;
+    display: flex;
+    font-size: var(--font-size-800);
+    justify-content: center;
+    padding: 0
+}
+
+.iconButton--V5Iv:hover {
+        color: var(--black-700);
+    }
+
+[dir="rtl"] .iconButton--V5Iv {
+    -webkit-transform: scaleX(-1);
+            transform: scaleX(-1);
+}
+
+        .reference-23HPe .verse a {
+            color: inherit;
+            pointer-events: none;
+        }
+
+.reference-23HPe .verse sup {
+            display: none;
+        }
+
+.reference-23HPe .verse-number {
+        font-weight: bold;
+    }
+
+.volume-xX8Uy {
+    font-family: var(--sans);
+    font-size: var(--font-size-200);
+    margin-top: 0;
+    line-height: 1.3333333;
+    margin-bottom: 1em
+}
+
+.volume-xX8Uy ~ * {
+        font-family: var(--serif);
+        font-size: var(--font-size-400);
+        line-height: 1.375;
+    }
+
+.citation-1gaxH {
+    font: var(--h3-sans);
+    line-height: 1.125;
+}
+
+:root {
+
+	/* ---- color ------*/
+	--color-pinterest: rgba(203,32,39,1);
+	--color-google: rgba(205,32,31,1);
+	--color-twitter: rgba(85,172,238,1);
+	--color-facebook: rgba(59,89,152,1);
+	--color-instagram: rgba(60,90,150,1);
+
+	/* ---- breakpoint ------*/
+	--breakpoint-100: 0em;
+	--breakpoint-200: 30em;
+	--breakpoint-300: 37.5em;
+	--breakpoint-400: 52.5em;
+	--breakpoint-500: 60em;
+	--breakpoint-600: 80em;
+	--breakpoint-700: 90em;
+	--breakpoint-800: 100em;
+	--breakpoint-900: 120em;
+
+	/* ---- media-query ------*/
+	@custom-media --mq-100 (min-width: 0em); 
+	@custom-media --mq-100-max (max-width: 37.499em)); 
+	@custom-media --mq-100-only (min-width: 0em) and (max-width: 37.499em);
+	@custom-media --mq-200 (min-width: 37.5em); 
+	@custom-media --mq-200-max (max-width: 59.999em)); 
+	@custom-media --mq-200-only (min-width: 37.5em) and (max-width: 59.999em);
+	@custom-media --mq-300 (min-width: 60em); 
+	@custom-media --mq-300-max (max-width: 79.999em)); 
+	@custom-media --mq-300-only (min-width: 60em) and (max-width: 79.999em);
+	@custom-media --mq-400 (min-width: 80em); 
+	@custom-media --mq-400-max (max-width: 119.999em)); 
+	@custom-media --mq-400-only (min-width: 80em) and (max-width: 119.999em);
+
+	/* ---- column-number ------*/
+	--column-number-400: 4;
+	--column-number-500: 8;
+	--column-number-600: 12;
+
+	/* ---- gutter ------*/
+	--gutter-500: 1em;
+	--gutter-600: 1.5em;
+
+	/* ---- z ------*/
+	--z-0: 0;
+	--z-100: 100;
+	--z-200: 200;
+	--z-300: 300;
+	--z-400: 400;
+	--z-500: 500;
+}
+:root {
+
+	/* ---- white ------*/
+	--white: rgba(255,255,255,1);
+	--white-500: rgba(255,255,255,1);
+	--white-500-t: rgba(255,255,255,0.5);
+
+	/* ---- black ------*/
+	--black-200: rgba(241,241,243,1);
+	--black-300: rgba(230,230,232,1);
+	--black-300-t: rgba(0,0,0,0.3);
+	--black-400: rgba(208,211,212,1);
+	--black-500: rgba(162,170,173,1);
+	--black-600: rgba(151,153,155,1);
+	--black-700: rgba(83,86,90,1);
+	--black-700-t: rgba(0,0,0,0.7);
+	--black: rgba(51,51,51,1);
+	--black-800: rgba(51,51,51,1);
+	--black-800-t: rgba(38,38,38,0.95);
+
+	/* ---- blue ------*/
+	--blue-300: rgba(100,205,234,1);
+	--blue-400: rgba(0,169,218,1);
+	--blue: rgba(0,127,164,1);
+	--blue-500: rgba(0,127,164,1);
+	--blue-600: rgba(3,98,125,1);
+
+	/* ---- green ------*/
+	--green-300: rgba(111,197,178,1);
+	--green-400: rgba(25,176,139,1);
+	--green: rgba(0,132,104,1);
+	--green-500: rgba(0,132,104,1);
+	--green-600: rgba(15,100,79,1);
+	--green-utility: rgba(12,134,103,1);
+
+	/* ---- orange ------*/
+	--orange-300: rgba(251,185,136,1);
+	--orange-400: rgba(251,142,60,1);
+	--orange: rgba(232,133,66,1);
+	--orange-500: rgba(232,133,66,1);
+	--orange-600: rgba(181,112,63,1);
+
+	/* ---- red ------*/
+	--red-300: rgba(229,132,129,1);
+	--red-400: rgba(211,56,55,1);
+	--red: rgba(190,44,51,1);
+	--red-500: rgba(190,44,51,1);
+	--red-600: rgba(175,42,49,1);
+	--red-utility: rgba(188,36,45,1);
+
+	/* ---- sans ------*/
+	--sans: 'Open Sans', Zoram, NotoSansMyanmar, 'noto sans', Helvetica, Arial, sans-serif;
+
+	/* ---- serif ------*/
+	--serif: 'Palatino Linotype', Palatino, Pahoran, NotoSansMyanmar, Georgia, serif;
+
+	/* ---- mono ------*/
+	--mono: 'Courier New', Courier, monospace, NotoSansMyanmar;
+
+	/* ---- sans-font ------*/
+	--sans-font-GWeb-Light-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-Light-Normal.woff;
+	--sans-font-GWeb-Light-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-Light-Normal.woff2;
+	--sans-font-GWeb-Light-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-Light-Italic.woff;
+	--sans-font-GWeb-Light-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-Light-Italic.woff2;
+	--sans-font-GWeb-Regular-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-Regular-Normal.woff;
+	--sans-font-GWeb-Regular-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-Regular-Normal.woff2;
+	--sans-font-GWeb-Regular-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-Regular-Italic.woff;
+	--sans-font-GWeb-Regular-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-Regular-Italic.woff2;
+	--sans-font-GWeb-SemiBold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-SemiBold-Normal.woff;
+	--sans-font-GWeb-SemiBold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-SemiBold-Normal.woff2;
+	--sans-font-GWeb-SemiBold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-SemiBold-Italic.woff;
+	--sans-font-GWeb-SemiBold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-SemiBold-Italic.woff2;
+	--sans-font-GWeb-Bold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-Bold-Normal.woff;
+	--sans-font-GWeb-Bold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-Bold-Normal.woff2;
+	--sans-font-GWeb-Bold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-Bold-Italic.woff;
+	--sans-font-GWeb-Bold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWeb-Bold-Italic.woff2;
+	--sans-font-GWebExt-Light-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-Light-Normal.woff;
+	--sans-font-GWebExt-Light-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-Light-Normal.woff2;
+	--sans-font-GWebExt-Light-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-Light-Italic.woff;
+	--sans-font-GWebExt-Light-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-Light-Italic.woff2;
+	--sans-font-GWebExt-Regular-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-Regular-Normal.woff;
+	--sans-font-GWebExt-Regular-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-Regular-Normal.woff2;
+	--sans-font-GWebExt-Regular-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-Regular-Italic.woff;
+	--sans-font-GWebExt-Regular-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-Regular-Italic.woff2;
+	--sans-font-GWebExt-SemiBold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-SemiBold-Normal.woff;
+	--sans-font-GWebExt-SemiBold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-SemiBold-Normal.woff2;
+	--sans-font-GWebExt-SemiBold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-SemiBold-Italic.woff;
+	--sans-font-GWebExt-SemiBold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-SemiBold-Italic.woff2;
+	--sans-font-GWebExt-Bold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-Bold-Normal.woff;
+	--sans-font-GWebExt-Bold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-Bold-Normal.woff2;
+	--sans-font-GWebExt-Bold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-Bold-Italic.woff;
+	--sans-font-GWebExt-Bold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebExt-Bold-Italic.woff2;
+	--sans-font-GWebViet-Light-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-Light-Normal.woff;
+	--sans-font-GWebViet-Light-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-Light-Normal.woff2;
+	--sans-font-GWebViet-Light-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-Light-Italic.woff;
+	--sans-font-GWebViet-Light-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-Light-Italic.woff2;
+	--sans-font-GWebViet-Regular-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-Regular-Normal.woff;
+	--sans-font-GWebViet-Regular-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-Regular-Normal.woff2;
+	--sans-font-GWebViet-Regular-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-Regular-Italic.woff;
+	--sans-font-GWebViet-Regular-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-Regular-Italic.woff2;
+	--sans-font-GWebViet-SemiBold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-SemiBold-Normal.woff;
+	--sans-font-GWebViet-SemiBold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-SemiBold-Normal.woff2;
+	--sans-font-GWebViet-SemiBold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-SemiBold-Italic.woff;
+	--sans-font-GWebViet-SemiBold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-SemiBold-Italic.woff2;
+	--sans-font-GWebViet-Bold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-Bold-Normal.woff;
+	--sans-font-GWebViet-Bold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-Bold-Normal.woff2;
+	--sans-font-GWebViet-Bold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-Bold-Italic.woff;
+	--sans-font-GWebViet-Bold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebViet-Bold-Italic.woff2;
+	--sans-font-GWebCyr-Light-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-Light-Normal.woff;
+	--sans-font-GWebCyr-Light-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-Light-Normal.woff2;
+	--sans-font-GWebCyr-Light-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-Light-Italic.woff;
+	--sans-font-GWebCyr-Light-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-Light-Italic.woff2;
+	--sans-font-GWebCyr-Regular-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-Regular-Normal.woff;
+	--sans-font-GWebCyr-Regular-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-Regular-Normal.woff2;
+	--sans-font-GWebCyr-Regular-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-Regular-Italic.woff;
+	--sans-font-GWebCyr-Regular-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-Regular-Italic.woff2;
+	--sans-font-GWebCyr-SemiBold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-SemiBold-Normal.woff;
+	--sans-font-GWebCyr-SemiBold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-SemiBold-Normal.woff2;
+	--sans-font-GWebCyr-SemiBold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-SemiBold-Italic.woff;
+	--sans-font-GWebCyr-SemiBold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-SemiBold-Italic.woff2;
+	--sans-font-GWebCyr-Bold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-Bold-Normal.woff;
+	--sans-font-GWebCyr-Bold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-Bold-Normal.woff2;
+	--sans-font-GWebCyr-Bold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-Bold-Italic.woff;
+	--sans-font-GWebCyr-Bold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyr-Bold-Italic.woff2;
+	--sans-font-GWebCyrExt-Light-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-Light-Normal.woff;
+	--sans-font-GWebCyrExt-Light-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-Light-Normal.woff2;
+	--sans-font-GWebCyrExt-Light-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-Light-Italic.woff;
+	--sans-font-GWebCyrExt-Light-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-Light-Italic.woff2;
+	--sans-font-GWebCyrExt-Regular-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-Regular-Normal.woff;
+	--sans-font-GWebCyrExt-Regular-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-Regular-Normal.woff2;
+	--sans-font-GWebCyrExt-Regular-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-Regular-Italic.woff;
+	--sans-font-GWebCyrExt-Regular-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-Regular-Italic.woff2;
+	--sans-font-GWebCyrExt-SemiBold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-SemiBold-Normal.woff;
+	--sans-font-GWebCyrExt-SemiBold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-SemiBold-Normal.woff2;
+	--sans-font-GWebCyrExt-SemiBold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-SemiBold-Italic.woff;
+	--sans-font-GWebCyrExt-SemiBold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-SemiBold-Italic.woff2;
+	--sans-font-GWebCyrExt-Bold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-Bold-Normal.woff;
+	--sans-font-GWebCyrExt-Bold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-Bold-Normal.woff2;
+	--sans-font-GWebCyrExt-Bold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-Bold-Italic.woff;
+	--sans-font-GWebCyrExt-Bold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebCyrExt-Bold-Italic.woff2;
+	--sans-font-GWebGr-Light-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-Light-Normal.woff;
+	--sans-font-GWebGr-Light-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-Light-Normal.woff2;
+	--sans-font-GWebGr-Light-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-Light-Italic.woff;
+	--sans-font-GWebGr-Light-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-Light-Italic.woff2;
+	--sans-font-GWebGr-Regular-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-Regular-Normal.woff;
+	--sans-font-GWebGr-Regular-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-Regular-Normal.woff2;
+	--sans-font-GWebGr-Regular-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-Regular-Italic.woff;
+	--sans-font-GWebGr-Regular-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-Regular-Italic.woff2;
+	--sans-font-GWebGr-SemiBold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-SemiBold-Normal.woff;
+	--sans-font-GWebGr-SemiBold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-SemiBold-Normal.woff2;
+	--sans-font-GWebGr-SemiBold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-SemiBold-Italic.woff;
+	--sans-font-GWebGr-SemiBold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-SemiBold-Italic.woff2;
+	--sans-font-GWebGr-Bold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-Bold-Normal.woff;
+	--sans-font-GWebGr-Bold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-Bold-Normal.woff2;
+	--sans-font-GWebGr-Bold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-Bold-Italic.woff;
+	--sans-font-GWebGr-Bold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebGr-Bold-Italic.woff2;
+	--sans-font-GWebM-Light-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-Light-Normal.woff;
+	--sans-font-GWebM-Light-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-Light-Normal.woff2;
+	--sans-font-GWebM-Light-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-Light-Italic.woff;
+	--sans-font-GWebM-Light-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-Light-Italic.woff2;
+	--sans-font-GWebM-Regular-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-Regular-Normal.woff;
+	--sans-font-GWebM-Regular-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-Regular-Normal.woff2;
+	--sans-font-GWebM-Regular-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-Regular-Italic.woff;
+	--sans-font-GWebM-Regular-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-Regular-Italic.woff2;
+	--sans-font-GWebM-SemiBold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-SemiBold-Normal.woff;
+	--sans-font-GWebM-SemiBold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-SemiBold-Normal.woff2;
+	--sans-font-GWebM-SemiBold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-SemiBold-Italic.woff;
+	--sans-font-GWebM-SemiBold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-SemiBold-Italic.woff2;
+	--sans-font-GWebM-Bold-Normal-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-Bold-Normal.woff;
+	--sans-font-GWebM-Bold-Normal-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-Bold-Normal.woff2;
+	--sans-font-GWebM-Bold-Italic-woff: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-Bold-Italic.woff;
+	--sans-font-GWebM-Bold-Italic-woff2: //edge.ldscdn.org/cdn2/common/fonts/zoram/v1/Zoram-GWebM-Bold-Italic.woff2;
+
+	/* ---- serif-font ------*/
+	--serif-font-GWeb-Regular-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWeb-Regular-Normal.woff;
+	--serif-font-GWeb-Regular-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWeb-Regular-Normal.woff2;
+	--serif-font-GWeb-Regular-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWeb-Regular-Italic.woff;
+	--serif-font-GWeb-Regular-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWeb-Regular-Italic.woff2;
+	--serif-font-GWeb-Bold-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWeb-Bold-Normal.woff;
+	--serif-font-GWeb-Bold-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWeb-Bold-Normal.woff2;
+	--serif-font-GWeb-Bold-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWeb-Bold-Italic.woff;
+	--serif-font-GWeb-Bold-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWeb-Bold-Italic.woff2;
+	--serif-font-GWebExt-Regular-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebExt-Regular-Normal.woff;
+	--serif-font-GWebExt-Regular-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebExt-Regular-Normal.woff2;
+	--serif-font-GWebExt-Regular-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebExt-Regular-Italic.woff;
+	--serif-font-GWebExt-Regular-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebExt-Regular-Italic.woff2;
+	--serif-font-GWebExt-Bold-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebExt-Bold-Normal.woff;
+	--serif-font-GWebExt-Bold-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebExt-Bold-Normal.woff2;
+	--serif-font-GWebExt-Bold-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebExt-Bold-Italic.woff;
+	--serif-font-GWebExt-Bold-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebExt-Bold-Italic.woff2;
+	--serif-font-GWebViet-Regular-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebViet-Regular-Normal.woff;
+	--serif-font-GWebViet-Regular-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebViet-Regular-Normal.woff2;
+	--serif-font-GWebViet-Regular-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebViet-Regular-Italic.woff;
+	--serif-font-GWebViet-Regular-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebViet-Regular-Italic.woff2;
+	--serif-font-GWebViet-Bold-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebViet-Bold-Normal.woff;
+	--serif-font-GWebViet-Bold-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebViet-Bold-Normal.woff2;
+	--serif-font-GWebViet-Bold-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebViet-Bold-Italic.woff;
+	--serif-font-GWebViet-Bold-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebViet-Bold-Italic.woff2;
+	--serif-font-GWebCyr-Regular-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyr-Regular-Normal.woff;
+	--serif-font-GWebCyr-Regular-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyr-Regular-Normal.woff2;
+	--serif-font-GWebCyr-Regular-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyr-Regular-Italic.woff;
+	--serif-font-GWebCyr-Regular-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyr-Regular-Italic.woff2;
+	--serif-font-GWebCyr-Bold-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyr-Bold-Normal.woff;
+	--serif-font-GWebCyr-Bold-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyr-Bold-Normal.woff2;
+	--serif-font-GWebCyr-Bold-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyr-Bold-Italic.woff;
+	--serif-font-GWebCyr-Bold-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyr-Bold-Italic.woff2;
+	--serif-font-GWebCyrExt-Regular-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyrExt-Regular-Normal.woff;
+	--serif-font-GWebCyrExt-Regular-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyrExt-Regular-Normal.woff2;
+	--serif-font-GWebCyrExt-Regular-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyrExt-Regular-Italic.woff;
+	--serif-font-GWebCyrExt-Regular-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyrExt-Regular-Italic.woff2;
+	--serif-font-GWebCyrExt-Bold-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyrExt-Bold-Normal.woff;
+	--serif-font-GWebCyrExt-Bold-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyrExt-Bold-Normal.woff2;
+	--serif-font-GWebCyrExt-Bold-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyrExt-Bold-Italic.woff;
+	--serif-font-GWebCyrExt-Bold-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebCyrExt-Bold-Italic.woff2;
+	--serif-font-GWebGr-Regular-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebGr-Regular-Normal.woff;
+	--serif-font-GWebGr-Regular-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebGr-Regular-Normal.woff2;
+	--serif-font-GWebGr-Regular-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebGr-Regular-Italic.woff;
+	--serif-font-GWebGr-Regular-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebGr-Regular-Italic.woff2;
+	--serif-font-GWebGr-Bold-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebGr-Bold-Normal.woff;
+	--serif-font-GWebGr-Bold-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebGr-Bold-Normal.woff2;
+	--serif-font-GWebGr-Bold-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebGr-Bold-Italic.woff;
+	--serif-font-GWebGr-Bold-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebGr-Bold-Italic.woff2;
+	--serif-font-GWebM-Regular-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebM-Regular-Normal.woff;
+	--serif-font-GWebM-Regular-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebM-Regular-Normal.woff2;
+	--serif-font-GWebM-Regular-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebM-Regular-Italic.woff;
+	--serif-font-GWebM-Regular-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebM-Regular-Italic.woff2;
+	--serif-font-GWebM-Bold-Normal-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebM-Bold-Normal.woff;
+	--serif-font-GWebM-Bold-Normal-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebM-Bold-Normal.woff2;
+	--serif-font-GWebM-Bold-Italic-woff: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebM-Bold-Italic.woff;
+	--serif-font-GWebM-Bold-Italic-woff2: //dev.ldscdn.org/cdn2/common/fonts/pahoran/v1/Pahoran-GWebM-Bold-Italic.woff2;
+
+	/* ---- font-size-root ------*/
+	--font-size-root: 16px;
+
+	/* ---- font-size ------*/
+	--font-size-50: 0.625rem;
+	--font-size-100: 0.6875rem;
+	--font-size-200: 0.75rem;
+	--font-size-300: 0.875rem;
+	--font-size-400: 1rem;
+	--font-size: 1.125rem;
+	--font-size-500: 1.125rem;
+	--font-size-600: 1.25rem;
+	--font-size-700: 1.375rem;
+	--font-size-750: 1.5rem;
+	--font-size-800: 1.625rem;
+	--font-size-900: 1.75rem;
+	--font-size-1000: 1.875rem;
+	--font-size-1100: 2.25rem;
+	--font-size-1200: 3.25rem;
+	--font-size-1300: 3.375rem;
+
+	/* ---- line-height ------*/
+	--line-height-400: 1.2em;
+	--line-height: 1.4em;
+	--line-height-500: 1.4em;
+	--line-height-600: 1.6em;
+
+	/* ---- spacing ------*/
+	--spacing-100: 0.25rem;
+	--spacing-150: 0.375rem;
+	--spacing-200: 0.5rem;
+	--spacing-250: 0.625rem;
+	--spacing-300: 0.9375rem;
+	--spacing-350: 1.25rem;
+	--spacing-400: 1.625rem;
+	--spacing-450: 2.5rem;
+	--spacing: 3.75rem;
+	--spacing-500: 3.75rem;
+	--spacing-600: 4.75rem;
+	--spacing-700: 5.625rem;
+	--spacing-800: 7.5rem;
+	--spacing-900: 9.375rem;
+
+	/* ---- speed ------*/
+	--speed-400: 500ms;
+	--speed: 300ms;
+	--speed-500: 300ms;
+	--speed-600: 100ms;
+
+	/* ---- border-radius ------*/
+	--border-radius: 4px;
+	--border-radius-500: 4px;
+	--border-radius-600: 6px;
+}
+/*@import "eden-css-variables/eden-css-variables.css";*/
+:root {
+    /* VIO Colors */
+    --link: #177C9C;
+
+    --black120: #212225;
+    --black125: #0D0F10;
+
+    --blue10: #7DE3F4;
+    --blue20: #01B6D1;
+    --blue30: #006184;
+
+    --green20: #6DB344;
+
+    --grey2: #F7F8F8;
+    --grey3: #EFF0F0;
+    --grey5: #E0E2E2;
+    --grey10: #D0D0D3;
+    --grey20: #A9ADAD;
+    --grey40: #53575B;
+
+    --yellow10: #FFB81C;
+    --yellow20: #F68D2E;
+
+    --red10: #FC7473;
+
+    --white: #FFFFFF;
+
+    --error: var(--red10);
+    --warning: #FFD072;
+    --confirmation: #A3D287; 
+
+    --confirmation40: #74bb49;
+
+    /* VIO Spacing */
+    --spacing4: 0.25rem;    /* 4px */
+    --spacing8: 0.5rem;     /* 8px */
+    --spacing16: 1rem;      /* 16px */
+    --spacing32: 2rem;      /* 32px */
+    --spacing64: 4rem;      /* 64px */
+    --spacing128: 8rem;     /* 128px */
+
+    /* primary */
+    --theme-color-100: var(--blue);
+    --link-color: var(--blue-600);
+
+    /* secondary */
+
+    --theme-color-200: var(--green);
+    --theme-color-300: var(--blue-300);
+    --theme-color-400: var(--green-300);
+    --theme-color-500: var(--blue-600);
+
+    --side-panel-background: var(--grey2);
+
+    @custom-media --mq-50-only (min-width: 0em) and (max-width: 24.999em);
+    @custom-media --mq-reader (min-width: 77.5em);
+    @custom-media --mq-mobile (min-width: 46em);
+}
+/* Zoram light (300) normal */
+@font-face {
+    font-family: "Zoram";
+    font-weight: 300;
+    font-style: normal;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-Light-Normal.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-Light-Normal.woff") format("woff");
+}
+/* Zoram light (300) italic */
+@font-face {
+    font-family: "Zoram";
+    font-weight: 300;
+    font-style: italic;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-Light-Italic.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-Light-Italic.woff") format("woff");
+}
+/* Zoram regular (400) normal */
+@font-face {
+    font-family: "Zoram";
+    font-weight: 400;
+    font-style: normal;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-Regular-Normal.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-Regular-Normal.woff") format("woff");
+}
+/* Zoram regular (400) italic */
+@font-face {
+    font-family: "Zoram";
+    font-weight: 400;
+    font-style: italic;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-Regular-Italic.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-Regular-Italic.woff") format("woff");
+}
+/* Zoram semi-bold (600) normal */
+@font-face {
+    font-family: "Zoram";
+    font-weight: 600;
+    font-style: normal;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-SemiBold-Normal.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-SemiBold-Normal.woff") format("woff");
+}
+/* Zoram semi-bold (600) italic */
+@font-face {
+    font-family: "Zoram";
+    font-weight: 600;
+    font-style: italic;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-SemiBold-Italic.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-SemiBold-Italic.woff") format("woff");
+}
+/* Zoram bold (700) normal */
+@font-face {
+    font-family: "Zoram";
+    font-weight: 700;
+    font-style: normal;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-Bold-Normal.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-Bold-Normal.woff") format("woff");
+}
+/* Zoram bold (700) italic */
+@font-face {
+    font-family: "Zoram";
+    font-weight: 700;
+    font-style: italic;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-Bold-Italic.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/zoram/latest/Zoram-GWebM-Bold-Italic.woff") format("woff");
+}
+/*******
+
+Pahoran
+
+*******/
+@font-face {
+    font-family: "Pahoran";
+    font-weight: 400;
+    font-style: Normal;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/pahoran/latest/Pahoran-GWebM-Regular-Normal.woff") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/pahoran/latest/Pahoran-GWebM-Regular-Normal.woff2") format("woff");
+}
+@font-face {
+    font-family: "Pahoran";
+    font-weight: 400;
+    font-style: Italic;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/pahoran/latest/Pahoran-GWebM-Regular-Italic.woff") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/pahoran/latest/Pahoran-GWebM-Regular-Italic.woff2") format("woff");
+}
+@font-face {
+    font-family: "Pahoran";
+    font-weight: 700;
+    font-style: Normal;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/pahoran/latest/Pahoran-GWebM-Bold-Normal.woff") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/pahoran/latest/Pahoran-GWebM-Bold-Normal.woff2") format("woff");
+}
+@font-face {
+    font-family: "Pahoran";
+    font-weight: 700;
+    font-style: Italic;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/pahoran/latest/Pahoran-GWebM-Bold-Italic.woff") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/pahoran/latest/Pahoran-GWebM-Bold-Italic.woff2") format("woff");
+}
+/*******
+
+McKay
+
+*******/
+/* McKay regular (400) normal */
+@font-face {
+    font-family: "McKay";
+    font-weight: 400;
+    font-style: normal;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/mckay/latest/McKay-GWebM-Regular-Normal.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/mckay/latest/McKay-GWebM-Regular-Normal.woff") format("woff");
+}
+/* McKay regular (400) italic */
+@font-face {
+    font-family: "McKay";
+    font-weight: 400;
+    font-style: italic;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/mckay/latest/McKay-GWebM-Regular-Italic.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/mckay/latest/McKay-GWebM-Regular-Italic.woff") format("woff");
+}
+/* McKay bold (700) normal */
+@font-face {
+    font-family: "McKay";
+    font-weight: 700;
+    font-style: normal;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/mckay/latest/McKay-GWebM-Bold-Normal.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/mckay/latest/McKay-GWebM-Bold-Normal.woff") format("woff");
+}
+/* McKay bold (700) italic */
+@font-face {
+    font-family: "McKay";
+    font-weight: 700;
+    font-style: italic;
+    src:
+        url("https://edge.ldscdn.org/cdn2/common/fonts/mckay/latest/McKay-GWebM-Bold-Italic.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/mckay/latest/McKay-GWebM-Bold-Italic.woff") format("woff");
+}
+/*******
+
+Myanmar
+
+*******/
+/* Myanmar regular (400) normal */
+@font-face {
+    font-family: "NotoSansMyanmar";
+    font-weight: 400;
+    font-style: normal;
+    src: local("NotoSansMyanmar-Regular"),
+        local("Noto Sans Myanmar Regular"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/NotoSansMyanmar/NotoSansMyanmar-Regular.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/NotoSansMyanmar/NotoSansMyanmar-Regular.woff") format("woff");
+}
+/* Myanmar regular (400) oblique */
+@font-face {
+    font-family: "NotoSansMyanmar";
+    font-weight: 400;
+    font-style: oblique;
+    src: local("NotoSansMyanmar-Regular"),
+        local("Noto Sans Myanmar Regular"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/NotoSansMyanmar/NotoSansMyanmar-Regular.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/NotoSansMyanmar/NotoSansMyanmar-Regular.woff") format("woff");
+}
+/* Myanmar bold (700) normal */
+@font-face {
+    font-family: "NotoSansMyanmar";
+    font-weight: 700;
+    font-style: normal;
+    src: local("NotoSansMyanmar-Bold"),
+        local("Noto Sans Myanmar Bold"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/NotoSansMyanmar/NotoSansMyanmar-Bold.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/NotoSansMyanmar/NotoSansMyanmar-Bold.woff") format("woff");
+}
+/* Myanmar bold (700) oblique */
+@font-face {
+    font-family: "NotoSansMyanmar";
+    font-weight: 700;
+    font-style: oblique;
+    src: local("NotoSansMyanmar-Bold"),
+        local("Noto Sans Myanmar Bold"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/NotoSansMyanmar/NotoSansMyanmar-Bold.woff2") format("woff2"),
+        url("https://edge.ldscdn.org/cdn2/common/fonts/NotoSansMyanmar/NotoSansMyanmar-Bold.woff") format("woff");
+}
+:root {
+    /* VIO Font Sizes */
+    --fontSize11: 0.6875rem;
+    --fontSize13: 0.8125rem;
+    --fontSize14: 0.875rem;
+    --fontSize16: 1rem;
+    --fontSize18: 1.125rem;
+    --fontSize20: 1.25rem;
+    --fontSize28: 1.75rem;
+    --fontSize32: 2rem;
+    --fontSize42: 2.625rem;
+
+
+    /* VIO Line Height */
+    --lineHeightTight: 1.2;
+    --lineHeight: 1.4;
+    --lineHeightLoose: 1.6;
+
+    --h1-sans: normal normal bold var(--font-size-1300)/var(--line-height-400) var(--sans);
+    --h2-sans: normal normal 100 var(--font-size-800)/var(--line-height-400) var(--sans);
+    --h3-sans: normal normal bold var(--font-size-400)/var(--line-height-400) var(--sans);
+    --h5-sans: normal normal bold var(--font-size-500)/var(--line-height-400) var(--sans);
+
+    --h1-serif: normal normal normal var(--font-size-1300)/var(--line-height-400) var(--serif);
+    --h1-serif-informal: italic normal bold var(--font-size-1200)/var(--line-height-400) var(--serif);
+    --h4-serif: normal normal normal var(--font-size-500)/var(--line-height-400) var(--serif);
+    --h6-serif: italic normal normal var(--font-size-500)/var(--line-height-400) var(--serif);
+}
+.associatedMedia-xZONW {
+    width: 100%;
+    font-size: 0.875rem;
+    font-size: var(--font-size-300)
+}
+.associatedMedia-xZONW img, .associatedMedia-xZONW video {
+        width: 100%;
+        margin: 0;
+    }
+.mediaIcon-3JmS5 {
+    margin-right: 1rem;
+    margin-right: var(--spacing16);
+}
+.videoDuration-2O3xb {
+    display: block;
+    float: right;
+    margin: calc(1rem * -1) 1rem 0 0;
+    margin: calc(var(--spacing16) * -1) var(--spacing16) 0 0;
+    -webkit-transform: translateY(-100%);
+            transform: translateY(-100%);
+    padding: 2px 7px;
+    border-radius: 2px;
+    background: white;
+}
+.wrapper-XuHjI {
+    display: flex;
+}
+/* Targets associatedMedia when not used in diambiguation or related content panels */
+div > .wrapper-XuHjI {
+    padding: 0.625rem 0.9375rem 0.9375rem;
+    padding: var(--spacing-250) var(--spacing-300) var(--spacing-300);
+    font-family: 'Open Sans', Zoram, NotoSansMyanmar, 'noto sans', Helvetica, Arial, sans-serif;
+    font-family: var(--sans);
+    flex: 1 1;
+}
+.crossRef-1FRlZ {
+    padding: var(--spacing-250) var(--spacing-300) var(--spacing-300);
+    font-family: var(--sans);
+    flex: 1 1;
+}
+
+.reference-3IQiO {
+    margin: var(--spacing-400) 0 0 var(--spacing-250);
+}
+
+
+    .disambiguationPanel-3fkBE div p[data-aid]:not(:last-of-type) {
+        padding-bottom: .65em;
+    }
+.disambiguationPanel-3fkBE .annotation-1Oho8 {
+        margin: .5em 0 0 .25em;
+    }
+.disambiguationPanel-3fkBE .disambiguationPanelItem-2mpO8 {
+        padding-bottom: var(--spacing-300);
+    }
+
+.annotationPointer-3JcKl {
+    cursor: pointer;
+}
+
+[data-aid-version] .icon-2tg3-[class] {
+    position: absolute;
+    -webkit-transform: translateY(-0.15em);
+            transform: translateY(-0.15em);
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    text-indent: 0;
+    text-indent: initial
+}
+
+[data-aid-version] .icon-2tg3-[class]::after {
+        content: "";
+        display: inline;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: white;
+        cursor: auto;
+        cursor: initial;
+    }
+
+[dir="ltr"] [data-aid-version] .icon-2tg3-[class] {
+        right: 3px
+}
+
+@media (min-width: 46rem) {
+
+[dir="ltr"] [data-aid-version] .icon-2tg3-[class] {
+            right: 20px
+}
+        }
+
+[dir="ltr"] [data-aid-version] .icon-2tg3-[class]::after {
+            left: -2px
+        }
+
+@media (min-width: 46rem) {
+
+[dir="ltr"] [data-aid-version] .icon-2tg3-[class]::after {
+                left: -12px
+        }
+            }
+
+[dir="rtl"] [data-aid-version] .icon-2tg3-[class] {
+        left: 3px
+}
+
+@media (min-width: 46rem) {
+
+[dir="rtl"] [data-aid-version] .icon-2tg3-[class] {
+            left: 20px
+}
+        }
+
+[dir="rtl"] [data-aid-version] .icon-2tg3-[class]::after {
+            right: -2px
+        }
+
+@media (min-width: 46rem) {
+
+[dir="rtl"] [data-aid-version] .icon-2tg3-[class]::after {
+                right: -12px
+        }
+            }
+
+.annotationIcon-2uuEs {
+    position: relative;
+    z-index: 1;
+}
+
+.footnote-3kI0m {
+    padding: var(--spacing-250) var(--spacing-300) var(--spacing-300);
+    font-family: var(--sans);
+    flex: 1 1;
+}
+
+.fullReference-2LE13 {
+    font-size: var(--font-size-300);
+    line-height: 1.57;
+    margin: 0;
+    pointer-events: none
+}
+
+.fullReference-2LE13 a {
+        color: inherit;
+    }
+
+.reference-3xPsV {
+    margin: var(--spacing-400) 0 0 var(--spacing-250);
+}
+
+span.hidden-163M6[class] {
+    color: var(--black120)
+}
+span.hidden-163M6[class] sup {
+        display: none;
+    }
+
+.panelGridLayout-3J74n {
+    display: grid;
+    -ms-grid-columns: 30px 14px 1fr;
+    grid-template-columns: 30px 1fr;
+    grid-gap: 10px 14px;
+    font-size: var(--font-size-300);
+    line-height: 1.45;
+    padding: 14px
+}
+.panelGridLayout-3J74n > :nth-child(odd) {
+        display: inline-block;
+        -ms-grid-column: 1;
+        grid-column: 1;
+        text-align: right;
+        color: rgba(0, 0, 0, .4);
+    }
+.panelGridLayout-3J74n > :nth-child(even) {
+        display: inline-block;
+        -ms-grid-column: 3;
+        grid-column: 2;
+        min-width: 0;
+        margin: 0;
+    }
+
+.bookmarkIcon-1etLp {
+    position: absolute;
+    cursor: pointer
+}
+
+[dir="ltr"] .bookmarkIcon-1etLp {
+        left: 20px
+}
+
+[dir="rtl"] .bookmarkIcon-1etLp {
+        right: 20px
+}
+
+[data-aid-version] div.bookmarkModal-sNMfe {
+    position: absolute;
+    width: 100%;
+    align-items: flex-start;
+    background-color: #fff;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: .5em;
+    border-radius: 2px;
+    box-shadow: 0 2px 5px 0 rgba(83, 87, 91, 0.3);
+    z-index: 1
+}
+
+[dir="ltr"] [data-aid-version] div.bookmarkModal-sNMfe {
+        left: 0;
+        border-left: 6px solid var(--blue20);
+        padding-left: 0
+}
+
+[dir="rtl"] [data-aid-version] div.bookmarkModal-sNMfe {
+        right: 0;
+        border-right: 6px solid var(--blue20);
+        padding-right: 0
+}
+
+[data-aid-version] div.bookmarkModal-sNMfe[class*="dragging"] span.bookmarkModalIcon-3r5h1 {
+        cursor: -webkit-grabbing;
+        cursor: grabbing;
+    }
+
+[data-aid-version] div.bookmarkModalBody-2mhEg {
+    align-items: center;
+    display: flex;
+    font-size: 16px;
+    font-family: Open Sans, Zoram, Noto Sans;
+    text-transform: none;
+    width: 100%;
+}
+
+[data-aid-version] span.bookmarkModalIcon-3r5h1 {
+    display: inline-flex;
+    margin: 0 0.75em;
+    font-size: 24px;
+    cursor: -webkit-grab;
+    cursor: grab;
+    touch-action: none; /* necessary to prevent scrolling when trying to drag the modal */
+}
+
+[data-aid-version] .bookmarkName-1-s1w {
+    text-align: left
+}
+
+[data-aid-version] .bookmarkName-1-s1w span {
+        font-size: 14px;
+        color: var(--grey40);
+        letter-spacing: 0;
+    }
+
+[data-aid-version] span.modalTitle-Vqlqi, span.modalTitle-Vqlqi {
+    text-transform: none;
+    font-family: Open Sans, Zoram, Noto Sans;
+    font-weight: 600;
+    font-size: 18px;
+    color: var(--black120);
+    padding: 0;
+    letter-spacing: 0;
+    text-align: left;
+    display: block;
+    font-style: none;
+}
+
+.input-1I6x4 {
+    border: none;
+    width: 100%;
+    height: 45px;
+    outline: none;
+    font-size: 18px
+}
+
+.input-1I6x4::-webkit-input-placeholder {
+        color: var(--grey10);
+    }
+
+.mediaPointer-Jmh4d {
+    cursor: pointer;
+}
+
+[data-aid-version] .icon-2c0Xg[class] {
+    position: absolute;
+    -webkit-transform: translateY(-0.15em);
+            transform: translateY(-0.15em);
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    text-indent: 0;
+    text-indent: initial
+}
+
+[data-aid-version] .icon-2c0Xg[class]::after {
+        content: "";
+        display: inline;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: white;
+        cursor: auto;
+        cursor: initial;
+    }
+
+[dir="ltr"] [data-aid-version] .icon-2c0Xg[class] {
+        right: 3px
+}
+
+@media (min-width: 46rem) {
+
+[dir="ltr"] [data-aid-version] .icon-2c0Xg[class] {
+            right: 20px
+}
+        }
+
+[dir="ltr"] [data-aid-version] .icon-2c0Xg[class]::after {
+            left: -2px
+        }
+
+@media (min-width: 46rem) {
+
+[dir="ltr"] [data-aid-version] .icon-2c0Xg[class]::after {
+                left: -12px
+        }
+            }
+
+[dir="rtl"] [data-aid-version] .icon-2c0Xg[class] {
+        left: 3px
+}
+
+@media (min-width: 46rem) {
+
+[dir="rtl"] [data-aid-version] .icon-2c0Xg[class] {
+            left: 20px
+}
+        }
+
+[dir="rtl"] [data-aid-version] .icon-2c0Xg[class]::after {
+            right: -2px
+        }
+
+@media (min-width: 46rem) {
+
+[dir="rtl"] [data-aid-version] .icon-2c0Xg[class]::after {
+                right: -12px
+        }
+            }
+
+.mediaIcon-2k9PL {
+    position: relative;
+    z-index: 1;
+}
+
+
+.LibraryHeader-2JAkt {
+    padding: var(--spacing-300) var(--spacing-400);
+    font-size: var(--font-size-300);
+    border-bottom: 1px solid var(--black-400);
+    position: -webkit-sticky;
+    position: sticky;
+    top: -1px;;
+    background: var(--white);
+    height: 62.75px;
+    z-index: 20;
+    display: flex;
+    align-items: center
+    /* Removed so BookmarksManager can be visible */
+    /* overflow: scroll; */
+}
+
+
+.LibraryHeader-2JAkt::-webkit-scrollbar {
+        display: none;
+    }
+
+
+.LibraryHeader-2JAkt .link-26FWy {
+        /*opacity: 0;*/
+        -webkit-animation: appear-2MChX 2s ease;
+                animation: appear-2MChX 2s ease;
+        white-space: nowrap
+    }
+
+
+.LibraryHeader-2JAkt .link-26FWy:empty {
+            background: var(--black-300);
+            background-size: 22px;
+            background-position: 0 0;
+            height: 22px;
+            width: 10vw;
+            position: absolute
+        }
+
+
+@media (min-width: 37.5em) and (max-width: 59.999em) {
+
+
+.LibraryHeader-2JAkt .link-26FWy:empty {
+                width: 30vw
+        }
+            }
+
+
+@media (min-width: 0em) and (max-width: 37.499em) {
+
+
+.LibraryHeader-2JAkt .link-26FWy:empty {
+                width: 60vw
+        }
+            }
+
+
+.LibraryHeader-2JAkt .right-GtkXH {
+        margin-left: auto;
+        display: flex
+    }
+
+
+.LibraryHeader-2JAkt .right-GtkXH > *:not(:last-child) {
+            margin-right: 1rem;
+        }
+
+
+.LibraryHeader-2JAkt .link-26FWy:not(:first-child) {
+        padding-left: var(--spacing-300)
+    }
+
+
+.LibraryHeader-2JAkt .link-26FWy:not(:first-child)::before {
+            content: '';
+            border-left: 1px solid var(--black-400);
+            padding-right: var(--spacing-300);
+        }
+
+
+.LibraryHeader-2JAkt .link-26FWy:not(:first-child):last-child {
+            color: var(--black);
+            pointer-events: none;
+            cursor: default;
+            padding-right: var(--spacing-400);
+        }
+
+
+.LibraryHeader-2JAkt .activeLink-2VzCW {
+        color: var(--blue);
+        cursor: pointer;
+    }
+
+
+.LibraryHeader-2JAkt .inactiveLink-1Iuez {
+        color: var(--black)
+    }
+
+
+.LibraryHeader-2JAkt .inactiveLink-1Iuez:hover {
+            text-decoration: none;
+        }
+
+
+@-webkit-keyframes appear-2MChX {
+    from {opacity: 0};
+    to {opacity: 1};
+}
+
+
+@keyframes appear-2MChX {
+    from {opacity: 0};
+    to {opacity: 1};
+}
+
+.addButton-2H4qx {
+    display: flex;
+    justify-content: center;
+    flex-basis: 100%;
+    margin-top: 1em;
+    max-width: 100%;
+}
+.bookmarkManager-a8aNB {
+    color: #0d0f10; /* black */
+    position: relative
+}
+.bookmarkManager-a8aNB .signIn-3qMIi {
+        margin: 10px 0 0;
+        width: 100%;
+    }
+.bookmarkManagerTitle-1UMSL {
+    line-height: 1.2;
+}
+.bookmark-1WHMp {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+.bookmarkContext-ALI8U {
+    color: #878a8c; /* grey30 */
+    font-size: .875rem; /* fontSize14 */
+}
+[dir="ltr"] .bookmarkLink-3fDac {
+    margin-right: 1rem;
+}
+[dir="rtl"] .bookmarkLink-3fDac {
+    margin-left: 1rem;
+}
+.bookmarkLink-3fDac {
+    color: #0d0f10; /* black */
+    flex: 1 1;
+    font-size: 1rem; /* fontSize16 */
+    line-height: 1.4;
+    text-align: left;
+    text-align: initial
+}
+.bookmarkLink-3fDac:hover {
+        text-decoration: none
+    }
+.bookmarkLink-3fDac:hover .bookmarkName-2JUKZ {
+            color: #01b6d1; /* colorLinkHover */
+        }
+.bookmarkHeader-2Bn20 {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    padding-top: var(--spacing4);
+    z-index: 5;
+}
+.bookmarkFooter-1fkfD {
+    position: -webkit-sticky;
+    position: sticky;
+    bottom: 0;
+    padding-bottom: var(--spacing4);
+    background-color: white;
+    z-index: 5;
+    width: 100%;
+    display: flex;
+    align-items: center
+}
+@media (min-width: 46em) {
+.bookmarkFooter-1fkfD {
+        padding-bottom: 1rem
+}
+    }
+.bookmarkList-eskxZ {
+    flex-basis: 100%;
+    overflow: auto
+}
+.bookmarkList-eskxZ li {
+        margin-top: 1rem
+    }
+.bookmarkList-eskxZ li label {
+            display: inline-flex;
+            align-items: center;
+        }
+.callout-CWeFS {
+    position: fixed;
+    top: 13px;
+    top: var(--top, 13px);
+    right: 4px;
+    left: 4px;
+    bottom: auto;
+    width: 280px;   
+    max-width: 75vw
+}
+@media (min-width: 46em) {
+.callout-CWeFS {
+        position: absolute;
+        top: calc(100% + 20px);
+        right: 0;
+        left: 0
+}
+    }
+[dir="ltr"] .callout-CWeFS {
+        left: auto
+}
+[dir="rtl"] .callout-CWeFS {
+        right: auto
+}
+.calloutInner-25XfU {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 var(--spacing16);
+    max-height: 55vh;
+    overflow-y: scroll
+}
+@media (min-width: 46em) {
+.calloutInner-25XfU {
+        padding: 0 1rem
+}
+    }
+.calloutInner-25XfU:focus {
+        outline: none;
+    }
+.calloutInner-25XfU header {
+        align-items: center;
+        border-bottom: 1px solid #d0d3d3; /* grey10 */
+        display: flex;
+        flex-basis: 100%;
+        justify-content: space-between;
+        padding: 3px
+    }
+@media (min-width: 46em) {
+.calloutInner-25XfU header {
+            padding-top: 1rem
+    }
+        }
+.editButton-3bTFD {
+    background: none;
+    border: none;
+    color: #177c9c; /* colorLink */
+    cursor: pointer;
+    font-size: 0.875rem /* fontSize14 */
+
+}
+[dir="ltr"] .editButton-3bTFD {
+        margin-left: auto
+
+}
+[dir="rtl"] .editButton-3bTFD {
+        margin-right: auto
+
+}
+.editTip-3ZrgU {
+    color: #a9adad; /* grey20 */
+    flex-basis: 100%;
+    margin-top: 1em;
+    text-align: center;
+}
+[dir="ltr"] .closeButton-1wExQ {
+        margin-left: var(--spacing8)
+}
+[dir="rtl"] .closeButton-1wExQ {
+        margin-right: var(--spacing8)
+}
+
+.login-1gOsB {
+    display: block;
+    margin: 0 0 10px;
+    text-align: center;
+    font-family: var(--sans)
+}
+.login-1gOsB.withBorder-1vFKA {
+        border-bottom: 1px solid #d0d3d3; /* grey10 */
+    }
+.login-1gOsB > * {
+        display: block;
+        margin: 0 auto 10px;
+        max-width: 75%;
+    }
+.login-1gOsB a {
+        font-size: var(--font-size-200);
+    }
+
+.errorPanel-3dEb3 {
+    margin: var(--spacing-450) 0;
+}
+
+
+/*# sourceMappingURL=app.2.7.2.css.map*/

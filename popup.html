@@ -4,21 +4,30 @@
         <title>Random Scripture Generator</title>
         <!-- Treat this as if it is a webpage.
         You can add additional css or javascript files if you need them. -->
-        <!-- <link rel="stylesheet" href="main.css"> -->
-        <!-- <link rel="stylesheet" href="lds-old.css"> -->
-        <link rel="stylesheet" href="lds-content.css"> <!-- necessary for superscripts to work.. ? -->
-        <!-- <link rel="stylesheet" href="scriptures.css"> -->
-        <link rel="stylesheet" href="popup.css">
+        <!-- necessary for superscripts to work.. ? --> 
+        <link rel="stylesheet" href="scriptures.css">
+        <link rel="stylesheet" href="app.css">
+        <!-- <link rel="stylesheet" href="popup.css">  -->
     </head>
     <body style="width: 350px;">
-        <div style="padding: 15px;">
-            <span style="margin: 7px; margin-left: 0px;"> Random Scripture :: <a id="verse-name" target="_blank">None</a></span> <br/>
-            <button id="newScripture" style="margin: 7px; margin-left: 0px;">
-                New Random Scripture
-            </button> <br/>
-            <p id="verse-content">Verse Content</p>
-        </div>
+        <section class="reference-23HPe reference-3xPsV">
+            <div style="padding: 15px;">
+                    <!-- This could be used to display the volume of the book. 
+                    It would need to be fetched from the URL. -->
+                    <!-- <p class="volume-xX8Uy">Volume</p> -->
+                    <a id="verse-name" class="verse" target="_blank">None</a></span> 
+                    <br/>
+                    <br/>
+                    <p id="verse-content" class="verse">Verse Content</p>
+                    <br/>
+                    <button id="newScripture" class="verse" style="margin: 7px; margin-left: 0px;">
+                    New Random Scripture
+                    </button> 
+                </div>
+        </section>
         <!-- Include the Javascript now  -->
+        <!-- <script src="verses.js"></script>
+        <script src="popup.js"></script> -->
         <script src="verses.js"></script>
         <script src="popup.js"></script>
     </body>
