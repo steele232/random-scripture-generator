@@ -3411,5 +3411,12 @@ span.hidden-163M6[class] sup {
     margin: var(--spacing-450) 0;
 }
 
+.refresh {
+    margin-top: 15px;
+    margin-right: 15px;
+    position:absolute;
+    top:0;
+    right:0;
+}
 
 /*# sourceMappingURL=app.2.7.2.css.map*/

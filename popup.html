@@ -7,27 +7,18 @@
         <!-- necessary for superscripts to work.. ? --> 
         <link rel="stylesheet" href="scriptures.css">
         <link rel="stylesheet" href="app.css">
-        <!-- <link rel="stylesheet" href="popup.css">  -->
     </head>
     <body style="width: 350px;">
         <section class="reference-23HPe reference-3xPsV">
-            <div style="padding: 15px;">
-                    <!-- This could be used to display the volume of the book. 
-                    It would need to be fetched from the URL. -->
-                    <!-- <p class="volume-xX8Uy">Volume</p> -->
-                    <a id="verse-name" class="verse" target="_blank">None</a></span> 
-                    <br/>
-                    <br/>
+            <div style="padding: 15px;">  
+                    <input id="newScripture" type="image" src="Icons/refresh_grey_54x54.png" class="refresh"/>
+                    <a id="verse-name" class="citation-1gaxH" target="_blank">None</a></span> 
+                    <p id="book-volume" class="volume-xX8Uy">Volume</p> 
                     <p id="verse-content" class="verse">Verse Content</p>
                     <br/>
-                    <button id="newScripture" class="verse" style="margin: 7px; margin-left: 0px;">
-                    New Random Scripture
-                    </button> 
                 </div>
         </section>
         <!-- Include the Javascript now  -->
-        <!-- <script src="verses.js"></script>
-        <script src="popup.js"></script> -->
         <script src="verses.js"></script>
         <script src="popup.js"></script>
     </body>

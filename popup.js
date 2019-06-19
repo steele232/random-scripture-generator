@@ -3,6 +3,7 @@
 // Load in the Scripture References
 /*================================*/
 var __ScriptureRefs__ = __verses__
+var volume
 
 /*================================*/
 // Get a Random Number!
@@ -32,6 +33,8 @@ function generateNewScripture() {
     linkElm.href = verseRefObj.url
     contentElm = document.getElementById("verse-content")
     contentElm.innerHTML = verseRefObj.content
+    bookVolume = document.getElementById("book-volume")
+    bookVolume.innerText = determineBook(verseRefObj.url)
 
     // SAVE the newly generated scripture as the lastScripture
     chrome.storage.local.set({"lastScripture": randVerseIdx}, (items) => {
@@ -53,7 +56,23 @@ function loadInScripture(scriptureIdx) {
     linkElm.href = verseRefObj.url
     contentElm = document.getElementById("verse-content")
     contentElm.innerHTML = verseRefObj.content
+    bookVolume = document.getElementById("book-volume")
+    bookVolume.innerText = determineBook(verseRefObj.url)
+}
 
+function determineBook(url) {
+    console.log(url)
+    if(url.includes("/bofm/")) {
+        return "Book of Mormon"
+    } else if(url.includes("/dc-testament/")) {
+        return "Doctrine and Covenants"
+    } else if(url.includes("/pgp/")) {
+        return "Pearl of Great Price"
+    } else if (url.includes("/nt/")) {
+        return "New Testament"
+    } else if (url.includes("/ot/")) {
+        return "Old Testament"
+    }
 }
 
 // Local storage && Load in scripture on Startup
