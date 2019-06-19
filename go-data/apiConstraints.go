@@ -220,8 +220,8 @@ func bookNumChaptersMap() map[string]int {
 
 	// Doctrine and Covenants ("dc-testament")
 	// ?? skipped the introduction?
-	numChaptersMap["dc"] = 138 // example: https://www.lds.org/scriptures/dc-testament/dc/1?lang=eng
-	numChaptersMap["od"] = 2   // 2 official declarations. example: https://www.lds.org/scriptures/dc-testament/od/1?lang=eng
+	numChaptersMap["dc"] = 138 // example: https://www.churchofjesuschrist.org/scriptures/dc-testament/dc/1?lang=eng
+	numChaptersMap["od"] = 2   // 2 official declarations. example: https://www.churchofjesuschrist.org/scriptures/dc-testament/od/1?lang=eng
 
 	// Pearl of Great Price ("pgp")
 	// ?? skipped the introduction?

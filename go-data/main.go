@@ -158,7 +158,7 @@ func buildURL(stdWorkCode, bookCode string, chapterInteger int) string {
 	var url string
 
 	//let's build a URL really fast
-	url = "https://www.lds.org/" + ScripturesPrefix +
+	url = "https://www.churchofjesuschrist.org/" + ScripturesPrefix +
 		"/" + stdWorkCode + "/" + bookCode + "/" + strconv.Itoa(chapterInteger) +
 		"?" + langParam
 

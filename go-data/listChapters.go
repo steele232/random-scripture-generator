@@ -98,8 +98,8 @@ var BofMBooks = []string{
 // Doctrine and Covenants ("dc-testament")
 // ?? skipped the introduction?
 var DCBooks = []string{
-	"dc", // example: https://www.lds.org/scriptures/dc-testament/dc/1?lang=eng
-	"od", // 2 official declarations. example: https://www.lds.org/scriptures/dc-testament/od/1?lang=eng
+	"dc", // example: https://www.churchofjesuschrist.org/scriptures/dc-testament/dc/1?lang=eng
+	"od", // 2 official declarations. example: https://www.churchofjesuschrist.org/scriptures/dc-testament/od/1?lang=eng
 }
 
 // Pearl of Great Price ("pgp")
