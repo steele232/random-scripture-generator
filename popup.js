@@ -1,5 +1,5 @@
-import fontawesome from '@fortawesome/fontawesome'
-import faFreeSolid from '@fortawesome/fontawesome-free-solid'
+// import fontawesome from '@fortawesome/fontawesome'
+// import faFreeSolid from '@fortawesome/fontawesome-free-solid'
 // import faProSolid from '@fortawesome/fontawesome-pro-solid'
 
 /*================================*/
@@ -62,7 +62,7 @@ function loadInScripture(scriptureIdx) {
     bookVolume = document.getElementById("book-volume")
     bookVolume.innerText = determineBook(verseRefObj.url)
 
-    
+
 
     // var icon = fontawesome.icon(faFreeSolid)
     // $('#replace-icon').html(icon.html)
