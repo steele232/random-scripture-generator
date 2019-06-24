@@ -1,3 +1,6 @@
+import fontawesome from '@fortawesome/fontawesome'
+import faFreeSolid from '@fortawesome/fontawesome-free-solid'
+// import faProSolid from '@fortawesome/fontawesome-pro-solid'
 
 /*================================*/
 // Load in the Scripture References
@@ -58,6 +61,13 @@ function loadInScripture(scriptureIdx) {
     contentElm.innerHTML = verseRefObj.content
     bookVolume = document.getElementById("book-volume")
     bookVolume.innerText = determineBook(verseRefObj.url)
+
+    
+
+    // var icon = fontawesome.icon(faFreeSolid)
+    // $('#replace-icon').html(icon.html)
+    // // the following work as well
+    // // $('#replace-icon').replaceWith(icon.node[0])
 }
 
 function determineBook(url) {
@@ -95,3 +105,6 @@ window.onload = () => {
 
     });
 };
+
+
+

@@ -222,4 +222,20 @@
     src: local('Open Sans Bold'), local('OpenSans-Bold'), url(https://fonts.gstatic.com/s/opensans/v16/mem5YaGs126MiZpBA-UN7rgOUuhpKKSTjw.woff2) format('woff2');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
   }
+
+  .blackblack {
+    background-color: #000000;
+  }
   
+.qtip-tip{background:url(../../images/common/q-tip-tip.png) bottom left no-repeat;height:16px!important;left:12px!important;top:1px!important;width:23px!important;z-index:7000}
+.qtip-wrapper{box-shadow:3px 3px 6px rgba(0,0,0,.6);z-index:5000}
+.qtip-contentWrapper{background-color:transparent!important}
+.qtip .qtip-title,.ui-tooltip-titlebar{background-color:#4b4a48!important;color:#fff;font:normal normal 16px/34px Palatino,"Palatino Linotype",Pahoran,Georgia,"Times New Roman",serif!important}
+.qtip .qtip-title acronym{text-transform:uppercase;font-size:14px!important}
+.qtip .qtip-title .qtip-button{color:#fff;padding:0 5px 0 15px}
+.qtip .qtip-title .qtip-button img{margin-bottom:4px}
+.qtip .qtip-content,.ui-tooltip-content{padding:13px 15px!important;overflow:hidden!important;background-color:#FBF9F2!important}
+
+
+}
+
