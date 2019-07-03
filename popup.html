@@ -4,20 +4,17 @@
         <title>Random Scripture Generator</title>
         <!-- Treat this as if it is a webpage.
         You can add additional css or javascript files if you need them. -->
-        <!-- <link rel="stylesheet" href="main.css"> -->
-        <!-- <link rel="stylesheet" href="lds-old.css"> -->
-        <link rel="stylesheet" href="lds-content.css"> <!-- necessary for superscripts to work.. ? -->
-        <!-- <link rel="stylesheet" href="scriptures.css"> -->
-        <link rel="stylesheet" href="popup.css">
+        <link rel="stylesheet" href="app.css">
     </head>
     <body style="width: 350px;">
-        <div style="padding: 15px;">
-            <span style="margin: 7px; margin-left: 0px;"> Random Scripture :: <a id="verse-name" target="_blank">None</a></span> <br/>
-            <button id="newScripture" style="margin: 7px; margin-left: 0px;">
-                New Random Scripture
-            </button> <br/>
-            <p id="verse-content">Verse Content</p>
-        </div>
+        <section class="reference-23HPe"> 
+            <div style="padding: 20px;">  
+                    <img id="newScripture" class="refresh" src="Icons/redo.svg"></img>
+                    <a id="verse-name" class="citation-1gaxH" target="_blank">None</a></span> 
+                    <p id="book-volume" class="volume-xX8Uy">Volume</p> 
+                    <p id="verse-content" class="verse">Verse Content</p>
+                </div>
+        </section>
         <!-- Include the Javascript now  -->
         <script src="verses.js"></script>
         <script src="popup.js"></script>
