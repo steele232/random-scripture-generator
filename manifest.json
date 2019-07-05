@@ -19,7 +19,7 @@
     ],
 
     "browser_action": {
-        "default_icon": "Icons/default.png",
+        "default_icon": "in-progress-icons/pngs/v3-scripture-orb1.png",
         "default_popup": "popup.html"
     },
 
@@ -27,7 +27,7 @@
         "16": "Icons/icon-16.png",
         "19": "Icons/icon-19.png",
         "38": "Icons/icon-38.png",
-        "48": "Icons/icon-48.png",
+        "48": "in-progress-icons/pngs/v3-scripture-orb1.png",
         "128": "Icons/icon-128.png",
         "256": "Icons/icon-256.png"
     },
