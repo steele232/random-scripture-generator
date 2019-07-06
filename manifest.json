@@ -32,10 +32,5 @@
         "256": "Icons/v3-scripture-orb1.png"
     },
 
-    "permissions": [
-        "tabs",
-        "storage",
-        "activeTab",
-        "file://*/*"
-    ]
+    "permissions": [ "storage" ]
 }
