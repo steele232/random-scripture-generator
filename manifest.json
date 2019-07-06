@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Random Scripture Generator",
-    "description": "Gives a random verse from the standard works of The Church of Jesus Christ of Latter Days Saints. (Not an official church app).",
+    "description": "Gives a random verse from the standard works of The Church of Jesus Christ of Latter-Days Saints. (Not an official church app.)",
     "version": "0.1",
 
     "background": {
