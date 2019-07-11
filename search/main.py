@@ -4,7 +4,7 @@ import json
 
 
 
-jsonScriptureFilePath = "random-scripture-generator/verses.json"
+jsonScriptureFilePath = "../verses.json"
 print(jsonScriptureFilePath)
 
 def getVerses(filePath):
@@ -27,13 +27,16 @@ allVerses, genesisVerses, exodusVerses = getVerses(jsonScriptureFilePath)
 # print(genesisVerses[:5])
 # print(exodusVerses[:5])
 
+# genesisVerses = genesisVerses + exodusVerses # HACK - use both books now
+genesisVerses = allVerses
+
 ########################################################
 ## Clean the data
 ########################################################
 
-# ["“","‘","’","”","¶","1","2","3","4","5","6","7","8","9","0","\"","'",",",".","(",")"]
+# ["“","‘","’","”","¶","1","2","3","4","5","6","7","8","9","0","\"","'",",",".","(",")",":","-"]
 def removeCharactersAndPunctuation(s):
-    for charStr in ["“","‘","’","”","¶","1","2","3","4","5","6","7","8","9","0","\"","'",",",".","(",")"]:
+    for charStr in ["“","‘","’","”","¶","1","2","3","4","5","6","7","8","9","0","\"","'",",",".","(",")", ":", "-"]:
         s = s.replace(charStr, "")
     return s
 
@@ -41,6 +44,7 @@ def cleanVerses(verseArray):
     for verse in verseArray:
         content = verse["content"]
         content = removeCharactersAndPunctuation(content)
+        content = content.strip()
         content = content.lower()
         verse["content"] = content
     return verseArray
@@ -65,7 +69,7 @@ print(genesisVerses[:2])
 
 for verse in exodusVerses:
     verseContent = verse["content"]
-    tokenList = verseContent.split()[1:]
+    tokenList = verseContent.split()
     verse["tokens"] = tokenList
 
 print(exodusVerses[:2])
@@ -98,6 +102,8 @@ from glove import Glove, Corpus
 # from Corpus 
 # from fastai.basics import *
 
+numComponents = 5
+
 # creating a corpus object
 corpus = Corpus() 
 
@@ -107,14 +113,14 @@ corpus.fit(lines)
 
 #creating a Glove object which will use the matrix created in the above lines to create embeddings
 #We can set the learning rate as it uses Gradient Descent and number of components
-glove = Glove(no_components=50, learning_rate=0.05)
+glove = Glove(no_components=numComponents)
  
-glove.fit(corpus.matrix, epochs=30, no_threads=4, verbose=True)
+glove.fit(corpus.matrix, no_threads=4, verbose=True)
 glove.add_dictionary(corpus.dictionary)
 # glove.save('glove.model')
 
 
-########################################################
+####################################beast####################
 ## Create Embeddings for every LINE
 ########################################################
 
@@ -130,7 +136,7 @@ verseEmbeddingsList = []
 
 # for 
 for lineWordList in inputMatrix:
-    lineEmbedding = np.zeros(50)
+    lineEmbedding = np.zeros(numComponents)
     for word in lineWordList:
         # print(word)
         wordEmbedding = glove.word_vectors[glove.dictionary[word]]
@@ -149,7 +155,7 @@ print(verseEmbeddingsList[:2])
 # CONVERT THIS TO A NUMPY ARRAY
 verseEmbeddingsList = np.array(verseEmbeddingsList)
 
-search = ""
+search = "praised"
 
 # Sort the verse embeddings based on the cosine similarity of the search
 
@@ -177,11 +183,63 @@ indexes = np.argsort(-np.array(similarities))
 
 for idx in indexes[:10]:
     print("################")
-#    print(idx)
-#    print("Search embedding: ", searchEmbedding)
-#    print("Line Embedding: ", verseEmbeddingsList[idx])
+    print(idx)
+    # print("Search embedding: ", searchEmbedding)
+    # print("Line Embedding: ", verseEmbeddingsList[idx])
     print("Similarity: ", similarities[idx])
     print("VERSE : ", lines[idx])
+    print("VERSE NAME : ", genesisVerses[idx]["humanName"])
+
+
+
+
+########################################################
+## Check synonyms
+########################################################
+
+# compare the search embedding with all the other words in the dictionary
+
+synonymSearch = "conceived"
+synonymSearchEmbedding = glove.word_vectors[glove.dictionary[synonymSearch]]
+
+
+
+otherWordSimilarities = []
+for word in glove.dictionary:
+    idxToWordVectors = glove.dictionary[word]
+    otherWordEmbedding = glove.word_vectors[idxToWordVectors]
+    cosSimilarity = 1.0 - spatial.distance.cosine(synonymSearchEmbedding, otherWordEmbedding)
+    otherWordSimilarities.append(cosSimilarity)
+
+
+indexes = np.argsort(-np.array(otherWordSimilarities))
+
+for index in indexes[:10]:
+    print("Brian's words", glove.inverse_dictionary[index])
+
+# for idx in indexes[:10]:
+#     print("################")
+#     print(idx)
+#     # print("Search embedding: ", searchEmbedding)
+#     # print("Line Embedding: ", verseEmbeddingsList[idx])
+#     print("Similarity: ", otherWordSimilarities[idx])
+#     # print("Word: ", )
+#     # print("VERSE : ", lines[idx])
+#     # print("VERSE NAME : ", genesisVerses[idx]["humanName"])
+
+
+
+
+
+
+
+########################################################
+## SEARCH -- i.e. Sort based on cosine similarity 
+########################################################
+
+
+
+
 
 
 

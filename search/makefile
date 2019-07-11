@@ -1,3 +1,3 @@
 
 run:
-	python3 -i main.py
+	python3 main.py
