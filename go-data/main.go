@@ -79,7 +79,7 @@ func main() {
 	/* Write to a file */
 
 	// open the file
-	f, err := os.Create("verses.json")
+	f, err := os.Create("verses-content.json")
 	if err != nil {
 		log.Println("Could not write to file verses.json: ", err)
 	}
