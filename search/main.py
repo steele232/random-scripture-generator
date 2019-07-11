@@ -221,7 +221,7 @@ for word in glove.dictionary:
 indexes = np.argsort(-np.array(otherWordSimilarities))
 
 for index in indexes[:10]:
-    print("Brian's words", glove.inverse_dictionary[index])
+    print("Synonyms", glove.inverse_dictionary[index])
 
 # for idx in indexes[:10]:
 #     print("################")
