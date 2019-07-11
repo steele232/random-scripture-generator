@@ -15,8 +15,8 @@ import (
 )
 
 type ScriptureRef struct {
-	Name string `json:"humanName"`
-	Url  string `json:"url"`
+	Name    string `json:"humanName"`
+	Url     string `json:"url"`
 	Content string `json:"content"`
 }
 
@@ -45,21 +45,28 @@ func main() {
 			log.Println("Could not make a document from url: ", chapterRef.Url, err)
 		}
 
-		numVerses := len(document.Find("p .verse").Nodes)
+		numVerses := len(document.Find(".verse").Nodes)
 		fmt.Println("URL : ", chapterRef.Url, " ==> ", numVerses, " :: @Chapter-IDX ", idx)
 
 		for i := 1; i <= numVerses; i++ {
-			newURL := insertVerseNumIntoURL(chapterRef.Url, i)
+
+			// Get ready to use GoQuery
 			verseNum := i
 			verseSelector := "#p" + strconv.Itoa(verseNum)
-			verseContent, err := document.Find(verseSelector).Html()
-			if err != nil {
-				log.Println("Could not make a verseContent HTML string from url: ", newURL, err)
-			}
+			verseRef := document.Find(verseSelector)
+
+			// Remove the Footnotes
+			verseRef.Find(".marker").Each(func(idx int, elem *goquery.Selection) {
+				elem.Empty()
+			})
+
+			// Save the ScriptureRef object
+			verseContent := verseRef.Text()
 			newName := chapterRef.Name + ":" + strconv.Itoa(verseNum)
-			newRef := ScriptureRef {
-				Name: newName,
-				Url:  newURL,
+			newURL := insertVerseNumIntoURL(chapterRef.Url, i)
+			newRef := ScriptureRef{
+				Name:    newName,
+				Url:     newURL,
 				Content: verseContent,
 			}
 			allVerseRefs = append(allVerseRefs, newRef)
