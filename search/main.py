@@ -2,7 +2,10 @@
 
 import json
 
+import sys
 
+search = sys.argv[1]
+synonymSearch = sys.argv[1]
 
 jsonScriptureFilePath = "../go-data/verses-content.json"
 print(jsonScriptureFilePath)
@@ -155,7 +158,8 @@ print(verseEmbeddingsList[:2])
 # CONVERT THIS TO A NUMPY ARRAY
 verseEmbeddingsList = np.array(verseEmbeddingsList)
 
-search = "praised"
+# search is now passed in as a command line argument
+# search = "praised"
 
 # Sort the verse embeddings based on the cosine similarity of the search
 
@@ -199,7 +203,8 @@ for idx in indexes[:10]:
 
 # compare the search embedding with all the other words in the dictionary
 
-synonymSearch = "conceived"
+# synonymSearch and search are now passed in as a command line arguments
+synonymSearch = search
 synonymSearchEmbedding = glove.word_vectors[glove.dictionary[synonymSearch]]
 
 
