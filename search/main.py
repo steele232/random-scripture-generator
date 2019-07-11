@@ -155,6 +155,7 @@ print(verseEmbeddingsList[:2])
 ########################################################
 ## SEARCH -- i.e. Sort based on cosine similarity 
 ########################################################
+from scipy import spatial
 
 # CONVERT THIS TO A NUMPY ARRAY
 verseEmbeddingsList = np.array(verseEmbeddingsList)
@@ -164,38 +165,40 @@ verseEmbeddingsList = np.array(verseEmbeddingsList)
 
 # Sort the verse embeddings based on the cosine similarity of the search
 
-searchEmbedding = glove.word_vectors[glove.dictionary[search]]
 
-# comnpare searchEmbedding with embedding of every verse (cos similarity)
+def doSearch(searchTerm):
 
-## get cosine similarity from every verse between that verse and my search term
+    searchEmbedding = glove.word_vectors[glove.dictionary[searchTerm]]
 
-from scipy import spatial
+    # comnpare searchEmbedding with embedding of every verse (cos similarity)
 
-similarities = []
-for verseEmbedding in verseEmbeddingsList:
-    # https://stackoverflow.com/questions/18424228/cosine-similarity-between-2-number-lists
-    cosSimilarity = 1.0 - spatial.distance.cosine(verseEmbedding, searchEmbedding)
-    similarities.append(cosSimilarity)
-
-print("########################################################")
-print(similarities[10:14])
+    ## get cosine similarity from every verse between that verse and my search term
 
 
-### getting indexes ??? 
+    similarities = []
+    for verseEmbedding in verseEmbeddingsList:
+        # https://stackoverflow.com/questions/18424228/cosine-similarity-between-2-number-lists
+        cosSimilarity = 1.0 - spatial.distance.cosine(verseEmbedding, searchEmbedding)
+        similarities.append(cosSimilarity)
 
-indexes = np.argsort(-np.array(similarities))
-
-for idx in indexes[:10]:
-    print("################")
-    print(idx)
-    # print("Search embedding: ", searchEmbedding)
-    # print("Line Embedding: ", verseEmbeddingsList[idx])
-    print("Similarity: ", similarities[idx])
-    print("VERSE : ", lines[idx])
-    print("VERSE NAME : ", genesisVerses[idx]["humanName"])
+    print("########################################################")
+    print(similarities[10:14])
 
 
+    ### getting indexes ??? 
+
+    indexes = np.argsort(-np.array(similarities))
+
+    for idx in indexes[:10]:
+        print("################")
+        print(idx)
+        # print("Search embedding: ", searchEmbedding)
+        # print("Line Embedding: ", verseEmbeddingsList[idx])
+        print("Similarity: ", similarities[idx])
+        print("VERSE : ", lines[idx])
+        print("VERSE NAME : ", genesisVerses[idx]["humanName"])
+
+doSearch(search)
 
 
 ########################################################
@@ -205,23 +208,31 @@ for idx in indexes[:10]:
 # compare the search embedding with all the other words in the dictionary
 
 # synonymSearch and search are now passed in as a command line arguments
-synonymSearch = search
-synonymSearchEmbedding = glove.word_vectors[glove.dictionary[synonymSearch]]
+
+def doSynonymFinding(searchTerm):
+
+    synonymSearch = searchTerm
+    synonymSearchEmbedding = glove.word_vectors[glove.dictionary[synonymSearch]]
 
 
 
-otherWordSimilarities = []
-for word in glove.dictionary:
-    idxToWordVectors = glove.dictionary[word]
-    otherWordEmbedding = glove.word_vectors[idxToWordVectors]
-    cosSimilarity = 1.0 - spatial.distance.cosine(synonymSearchEmbedding, otherWordEmbedding)
-    otherWordSimilarities.append(cosSimilarity)
+    otherWordSimilarities = []
+    for word in glove.dictionary:
+        idxToWordVectors = glove.dictionary[word]
+        otherWordEmbedding = glove.word_vectors[idxToWordVectors]
+        cosSimilarity = 1.0 - spatial.distance.cosine(synonymSearchEmbedding, otherWordEmbedding)
+        otherWordSimilarities.append(cosSimilarity)
 
 
-indexes = np.argsort(-np.array(otherWordSimilarities))
+    indexes = np.argsort(-np.array(otherWordSimilarities))
 
-for index in indexes[:10]:
-    print("Synonyms", glove.inverse_dictionary[index])
+    for index in indexes[:10]:
+        print("Synonyms", glove.inverse_dictionary[index])
+
+
+
+doSynonymFinding(search)
+
 
 # for idx in indexes[:10]:
 #     print("################")
