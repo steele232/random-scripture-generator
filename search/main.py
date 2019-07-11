@@ -4,7 +4,7 @@ import json
 
 
 
-jsonScriptureFilePath = "../verses.json"
+jsonScriptureFilePath = "../go-data/verses-content.json"
 print(jsonScriptureFilePath)
 
 def getVerses(filePath):
