@@ -106,7 +106,7 @@ from glove import Glove, Corpus
 # from Corpus 
 # from fastai.basics import *
 
-numComponents = 5
+numComponents = 50
 
 # creating a corpus object
 corpus = Corpus() 
