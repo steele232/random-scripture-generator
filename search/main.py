@@ -31,7 +31,8 @@ allVerses, genesisVerses, exodusVerses = getVerses(jsonScriptureFilePath)
 # print(exodusVerses[:5])
 
 # genesisVerses = genesisVerses + exodusVerses # HACK - use both books now
-genesisVerses = allVerses
+# genesisVerses = allVerses
+# back to just using genesisVerses
 
 ########################################################
 ## Clean the data
